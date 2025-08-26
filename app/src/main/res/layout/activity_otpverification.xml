@@ -152,6 +152,7 @@
 
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_phone"
                     android:layout_marginHorizontal="24dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

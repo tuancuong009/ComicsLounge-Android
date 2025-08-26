@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.comics.lounge.R;
@@ -77,6 +78,7 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
     private ScreeFlow screenFlow;
     private ImageView imgHome,imgHome1 ;
     String otpCode = "";
+    AppCompatTextView tvPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +89,7 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
         saveOtpBtn = findViewById(R.id.save_otp_btn);
         mobileNoEdt = findViewById(R.id.mobile_no_edt);
         countryCodeTxt = findViewById(R.id.country_code_str);
+        tvPhone = findViewById(R.id.tv_phone);
 
         verifiCOdeEdt = findViewById(R.id.enter_code_edi);
         doneBtn = findViewById(R.id.done_otp_btn);
@@ -120,6 +123,7 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
 
             if (screenFlow == FROM_REGISTER) {
                 regJson = intent.getStringExtra("regJson");
+                AppUtil.focusKeyboard(mobileNoEdt, this);
             } else if (screenFlow == OTP_VIEW) {
                 viewSwitcher.showNext();    //show verify otp screen view
             } else if (screenFlow == EDIT_PROFILE || screenFlow == FROM_HOME) {
@@ -323,7 +327,7 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
                 if (!registerServiceManager.getServiceStatus().toLowerCase().equals(SUCCESS)) {
                     DialogUtils.showInfoAlert(this, getString(R.string.app_name), registerServiceManager.getResponseMsg());
                 } else {
-                    Toast.makeText(this, registerServiceManager.getResponseMsg(), Toast.LENGTH_LONG).show();
+//                    Toast.makeText(this, registerServiceManager.getResponseMsg(), Toast.LENGTH_LONG).show();
                 }
 
                 //displaySnackBarMessage(registerServiceManager.getResponseMsg());
@@ -383,13 +387,14 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
     private void onOTPVerified() {
         if (screenFlow == OTP_VIEW) {
             Toast.makeText(this, R.string.otp_verfy_done, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-           /* Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);*/
-            finish();
+//            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//           /* Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);*/
+//            finish();
+            verifyEmailOtp();
         } else if (screenFlow == EDIT_PROFILE) {
             displaySnackBarMessage(getString(R.string.otp_verfy_done));
             editProfileAPiCalling();
@@ -410,13 +415,15 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
         showSwitcher(loaderSwitcher, 0); //hide loading
         otpSendServiceManager.getServiceStatus();
 
-        if (screenFlow == FROM_REGISTER) {
-            verifyEmailOtp();   //Open next email verify screen
-        } else {
+//        if (screenFlow == FROM_REGISTER) {
+//            verifyEmailOtp();   //Open next email verify screen
+//        } else {
             //show next mobile otp screen
             //For the VERIFY_MOBILE + EDIT_PROFILE + HOME
+        screenFlow = OTP_VIEW;
             showSwitcher(viewSwitcher, 1);
-        }
+            tvPhone.setText(getString(R.string.enter_confirm_code_str)+" ("+mobileNoEdt.getText().toString().trim()+")");
+//        }
     }
 
     private void verifyEmailOtp() {

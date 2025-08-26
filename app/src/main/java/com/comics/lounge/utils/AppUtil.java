@@ -77,10 +77,10 @@ public class AppUtil {
         return false;
     }
     public static void focusKeyboard(EditText edt, Context context) {
-        edt.setFocusableInTouchMode(true);
         edt.requestFocus();
-        WindowCompat.getInsetsController(((Activity) context).getWindow(), edt).show(WindowInsetsCompat.Type.ime());
-        edt.setSelection(edt.getText().length());
+        WindowCompat.getInsetsController(((Activity) context).getWindow(), edt)
+                .show(WindowInsetsCompat.Type.ime());
+        edt.setSelection(edt.length());
     }
     public static boolean edtBlank(TextInputEditText editText, TextInputLayout ip, String message) {
         String content = editText.getText().toString();

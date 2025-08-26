@@ -447,14 +447,14 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
         if (eventPriceDates != null) {
             if (isWithoutMeal) {
                 txtCounterView.setText(String.valueOf(counter));
-                txtView.setText(getString(R.string.show_only_new) + " : " + NumberUtils.formatMoney(eventPriceDates.getPrice()) + " * " + counter);
+                txtView.setText(getString(R.string.show_only_new) +  NumberUtils.formatMoney(eventPriceDates.getPrice()) + " * " + counter);
                 double totalPrice = NumberUtils.parseMoney(eventPriceDates.getPrice()) * counter;
                 totalValue.setText(NumberUtils.formatMoney(totalPrice));
 
                 eventPriceDates.setQty(String.valueOf(counter));
             } else {
                 txtCounterView.setText(String.valueOf(counter));
-                txtView.setText(getString(R.string.show_with_meal_qty) + " : " + NumberUtils.formatMoney(eventPriceDates.getPrice()) + " * " + counter);
+                txtView.setText(getString(R.string.show_with_meal_qty) +  NumberUtils.formatMoney(eventPriceDates.getPrice()) + " * " + counter);
                 double totalPrice = NumberUtils.parseMoney(eventPriceDates.getPrice()) * counter;
                 totalValue.setText(NumberUtils.formatMoney(totalPrice));
                 eventPriceDates.setQty(String.valueOf(counter));
@@ -600,11 +600,11 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
             if (dateStr.equals(eventPriceDates.getDate())) {
                 if (eventPriceDates.getText().equals(Constant.SHOW_ONLY_STR)) {
                     showOnly = eventPriceDates;
-                    showOnlyMealCap.setText(getString(R.string.show_only_new) + " : " + eventPriceDates.getPrice() + " * 0");
+                    showOnlyMealCap.setText(getString(R.string.show_only_new) + eventPriceDates.getPrice() + " * 0");
                 }
                 if (eventPriceDates.getText().equals(Constant.SHOW_WITH_MEAL_STR)) {
                     showWithOnly = eventPriceDates;
-                    showWithMealCap.setText(getString(R.string.show_with_meal_qty) + " : " + eventPriceDates.getPrice() + " * 0");
+                    showWithMealCap.setText(getString(R.string.show_with_meal_qty) + eventPriceDates.getPrice() + " * 0");
                 }
             }
         }

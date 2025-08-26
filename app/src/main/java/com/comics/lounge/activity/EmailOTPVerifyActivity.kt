@@ -142,11 +142,9 @@ class EmailOTPVerifyActivity : AbstractBaseActivity() {
                 finish()
             }
             REGISTER -> {
-                startActivity(Intent(this, MobileVerificationActivity::class.java).apply {
-                    putExtra(MobileVerificationActivity.EXTRA_SCREEN_FLOW,
-                            MobileVerificationActivity.ScreeFlow.OTP_VIEW)
-                    putExtra(MobileVerificationActivity.EXTRA_USER_ID, userId)
-                })
+                val intent = Intent(getApplicationContext(), LoginActivity::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
                 finish()
             }
         }
