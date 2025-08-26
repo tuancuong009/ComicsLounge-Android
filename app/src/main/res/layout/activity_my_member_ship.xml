@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyMemberShip"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+    <include layout="@layout/top_bar_layout" android:id="@+id/top_bar"/>
+    <TextView
+        android:layout_marginStart="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/my_membership_str"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_marginStart="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/membership_str"
+        android:textColor="@color/gray_2"
+        android:textSize="12dp" />
+    <RelativeLayout
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_mb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/membership_str"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@mipmap/ic_right"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_purchase">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/purchase_date"
+            android:textColor="@color/bg_splash"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/tv_pc_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="26 June 2024"
+            android:textColor="@color/gray_2"
+            android:textSize="14dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_expire">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/expire_in"
+            android:textColor="@color/bg_splash"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/tv_expire_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="29 days"
+            android:textColor="@color/gray_2"
+            android:textSize="14dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey_5"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_marginStart="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/membership_list"
+        android:textColor="@color/gray_2"
+        android:textSize="12dp" />
+    <RelativeLayout
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/share_membership_list_str"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@mipmap/ic_right"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey_5"
+        android:layout_marginTop="15dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

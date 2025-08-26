@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone"
+    android:paddingTop="10dp">
+    <ViewSwitcher
+        android:id="@+id/vs_event_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="184dp">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/background_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+                        <CheckBox
+                            android:layout_alignParentBottom="true"
+                            android:id="@+id/cb_like"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/cb_like_selector"
+                            android:button="@android:color/transparent" />
+                    </RelativeLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginHorizontal="15dp"
+                        android:id="@+id/performer_title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/bg_splash"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginTop="10dp"/>
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:paddingHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/dooor_open_str"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="12dp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/door_open"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_width="1dp"
+                                android:layout_height="15dp"
+                                android:background="@color/gray_1"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/dinner_str"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="12dp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_marginStart="3dp"
+                                    android:id="@+id/dinner_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="12dp"  />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_width="1dp"
+                                android:layout_height="15dp"
+                                android:background="@color/gray_1"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/show_str"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="12dp"  />
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_marginStart="3dp"
+                                    android:id="@+id/show_time_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="12dp"  />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/supported_name_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Supported by: 6-8 Comedians from the Comedy Festival"
+                            android:textColor="@color/gray_1"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppins_regular" />
+                        <TextView
+                            android:textAllCaps="true"
+                            android:text="@string/description"
+                            android:textColor="@color/bg_splash"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/descripton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppins_regular" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginBottom="30dp"
+                    android:id="@+id/get_ticket_btn"
+                    style="@style/CalenderButton"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/get_ticket" />
+        </LinearLayout>
+
+        <include layout="@layout/progress_view_layout" />
+    </ViewSwitcher>
+
+
+    <include android:visibility="gone" layout="@layout/buttom_sheet_view" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

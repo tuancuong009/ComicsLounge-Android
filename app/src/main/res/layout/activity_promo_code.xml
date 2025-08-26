@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maian_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.PromoCodeActivity">
+
+    <ViewSwitcher
+        android:id="@+id/view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/bt_back"
+                            android:src="@mipmap/ic_back"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/buy_membership"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMemberTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            tools:text="Membership title" />
+
+                        <ImageView
+                            android:id="@+id/ivMemberInfo"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_question" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/contact_us_edt_back_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/show_only"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_history_font_size" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMemberShipFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/zero_str"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_history_font_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/discount_str"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_history_font_size" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDiscountAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/zero_str"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_history_font_size" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/contact_us_edt_back_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/total_str"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_history_font_size"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/zero_str"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_history_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/contact_us_edt_back_color" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/enter_promo_code"
+                        android:textColor="@color/black"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtPromoCode"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edt"
+                            android:imeOptions="actionGo"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@drawable/edt_txt_cursor"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="0dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnApply"
+                                style="@style/CalenderButton"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="@color/calender_btn_bg_color"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/apply" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlProgress"
+                                style="@style/CalenderButton"
+                                android:layout_width="100dp"
+                                android:visibility="gone">
+
+                                <ProgressBar
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:indeterminateTint="@color/white" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvPromoMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/promo_code_applied_value"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:layout_centerVertical="true"
+                            android:id="@+id/is_checkbox"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:background="@drawable/cb_selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/is_checkbox"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/txt_tems_andcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gift_membership_str_que"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/gray_2"
+                            android:textSize="14dp"  />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/ivGiftMembership"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_question" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llShareMembershiptForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginBottom="17dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_edt"
+                                android:hint="@string/enter_first_name"
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textCursorDrawable="@drawable/edt_txt_cursor"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_edt"
+                                android:hint="@string/enter_last_name"
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textCursorDrawable="@drawable/edt_txt_cursor"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edt"
+                            android:hint="@string/email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@drawable/edt_txt_cursor"
+                            android:textSize="14dp" />
+
+                        <!-- <androidx.appcompat.widget.AppCompatTextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="16dp"
+                             android:fontFamily="@font/roboto"
+                             android:text="@string/enter_mobile_no_str"
+                             android:textColor="@color/black"
+                             android:textSize="14dp" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="60dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/bg_edt"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="@string/country_code_val_str"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/bg_edt"
+                                android:cursorVisible="true"
+                                android:hint="@string/mobile_number"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textCursorDrawable="@drawable/edt_txt_cursor"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                style="@style/CalenderButton"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/roboto"
+                android:text="@string/process_to_pay" />
+        </LinearLayout>
+
+
+        <include layout="@layout/progress_view_layout" />
+
+    </ViewSwitcher>
+</LinearLayout><!--    <include layout="@layout/share_membership_form_bottm_sheet"/>-->

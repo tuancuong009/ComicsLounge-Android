@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ViewSwitcher
+        android:id="@+id/parent_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ViewSwitcher
+            android:id="@+id/view_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/feature_video_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+            <LinearLayout
+                style="@style/not_found_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/data_not_found_view" />
+
+            </LinearLayout>
+
+        </ViewSwitcher>
+
+        <include layout="@layout/progress_view_layout" />
+    </ViewSwitcher>
+</LinearLayout>

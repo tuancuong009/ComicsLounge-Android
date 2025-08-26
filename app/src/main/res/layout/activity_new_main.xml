@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.NewMain"
+    android:paddingTop="20dp">
+    <include layout="@layout/top_bar_layout" android:id="@+id/top_bar"/>
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/ll_bot_bar"/>
+    <FrameLayout
+        android:id="@+id/fl_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/ll_bot_bar"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_bot_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:weightSum="2">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:weightSum="3.5"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/bt_calendar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    app:tint="@color/grey_2"
+                    android:id="@+id/iv_calendar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_calendar" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bt_gallery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_gallery"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_gallery"
+                    app:tint="@color/grey_2" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bt_food"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_food"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_menu"
+                    app:tint="@color/grey_2" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:weightSum="3.5"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/bt_concierge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_concierge"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_concierge"
+                    app:tint="@color/grey_2" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bt_contact"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_contact"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_contacts"
+                    app:tint="@color/grey_2" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bt_acc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/iv_acc"
+                    app:tint="@color/grey_2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_person"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_home"
+        android:outlineSpotShadowColor="@color/bg_splash"
+        android:src="@mipmap/ic_home"
+        app:backgroundTint="@color/bg_splash"
+        android:layout_centerHorizontal="true"
+        app:maxImageSize="31dp"
+        android:layout_marginBottom="-33dp"
+        android:contentDescription="@string/app_name"
+        android:layout_above="@id/ll_bot_bar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        tools:targetApi="p" />
+</RelativeLayout>

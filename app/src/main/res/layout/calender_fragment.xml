@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/llMainlayout"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ViewSwitcher
+        android:id="@+id/parent_view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/search_edt_drawble_bg">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/search_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/search_edt_drawble_bg"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Search"
+                    android:lines="1"
+                    android:maxLength="100"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="9dp"
+                    android:paddingRight="15dp"
+                    android:inputType="text"
+                    android:paddingBottom="9dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.comics.lounge.customeview.OwnViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.comics.lounge.customeview.OwnViewPager>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/lefty_arrow"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_left_dark" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/lefty_arrow_disabled"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="17dp"
+                            android:visibility="gone"
+                            android:tint="@color/disable_icon"
+                            android:src="@drawable/ic_left_dark" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/date_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.8"
+                            android:fontFamily="@font/roboto"
+                            android:gravity="center"
+                            android:text="@string/loading_str"
+                            android:textColor="@color/black"
+                            android:visibility="invisible" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/right_arrow"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_right_dark" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/right_arrow_disabled"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="17dp"
+                            android:visibility="gone"
+                            android:tint="@color/disable_icon"
+                            android:src="@drawable/ic_right_dark" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/progress_view_layout" />
+
+    </ViewSwitcher>
+
+
+</LinearLayout>

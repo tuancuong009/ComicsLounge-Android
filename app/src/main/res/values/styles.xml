@@ -1,0 +1,143 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="myAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimaryDark">@color/bg_splash</item>
+        <item name="colorPrimary">@color/bg_splash</item>
+        <item name="colorAccent">@color/bg_splash</item>
+        <item name="colorControlNormal">@color/bg_splash</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="homeAsUpIndicator">@mipmap/ic_launcher</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionModeBackground">@color/white</item>
+        <item name="actionModeBackground">@color/colorPrimaryDark</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+    <style name="RemoveAppSplashTheme" parent="@style/myAppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="ContentLoadingProgress">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--<item name="android:textColorPrimary">@color/black</item>
+        <item name="android:background">@color/white</item>-->
+    </style>
+
+    <style name="AppHeaderMainLayout">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <style name="AppHeaderNameStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/heder_heading_txt_size</item>
+        <!--<item name="android:layout_marginStart">@dimen/header_heading_margin_start</item>-->
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <style name="password_eye_img_styles">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="srcCompat">@drawable/ic_hide_eye</item>
+    </style>
+
+    <style name="AppHeaderNavIconStyle">
+        <item name="android:layout_width">@dimen/header_nav_icon_wid_hei</item>
+        <item name="android:layout_height">@dimen/header_nav_icon_wid_hei</item>
+        <item name="android:layout_marginEnd">@dimen/header_nav_icon_margin_end</item>
+
+        <item name="android:padding">@dimen/header_nav_icon_padding</item>
+        <item name="android:src">@drawable/humburger_menu_line</item>
+        <item name="android:clickable">true</item>
+
+    </style>
+
+
+    <style name="not_found_layout">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_popup_invite</item>
+    </style>
+    <style name="BottomSheetDialogTheme2" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle2</item>
+    </style>
+
+    <style name="BottomSheetStyle2" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_popup_food</item>
+    </style>
+    <style name="MatchSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">@color/grey_2</item>
+        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:textColorHint">@color/grey_3</item>
+        <item name="android:listSelector">@drawable/spinner_selector</item>
+        <item name="android:textAppearance">@drawable/item_text_selector</item>
+    </style>
+    <style name="MatchSpinnerTheme" parent="myAppTheme">
+        <item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>
+    </style>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="tab_menu_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="tab_text_gallery" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/liner_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/left_menu_item_height"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/left_menu_icon"
+        android:layout_width="@dimen/left_nav_menu_icon_size"
+        android:layout_height="@dimen/left_nav_menu_icon_size"
+        app:srcCompat="@drawable/ic_home" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nav_menu_name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="15dp"
+        android:text="@string/loading_str"
+        android:textColor="@color/black"
+        android:textSize="@dimen/left_nav_menu_txt_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

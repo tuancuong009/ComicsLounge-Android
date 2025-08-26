@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320441968517",
+    "project_id": "comics-lounge",
+    "storage_bucket": "comics-lounge.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320441968517:android:1722dd500dc496ffde06ec",
+        "android_client_info": {
+          "package_name": "com.comics.lounge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoAEddPmQjCr-orDVbjoJqBC2BoSO4W-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

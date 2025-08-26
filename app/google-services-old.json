@@ -1,0 +1,951 @@
+{
+  "project_info": {
+    "project_number": "1013782717573",
+    "firebase_url": "https://fir-phoneauth-dd6da.firebaseio.com",
+    "project_id": "fir-phoneauth-dd6da",
+    "storage_bucket": "fir-phoneauth-dd6da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:a11c5821a423299d0b75ec",
+        "android_client_info": {
+          "package_name": "com.androidmads.firebaseuserauthsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-b02j03onpvamia93ohfdf71q6hoglh4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androidmads.firebaseuserauthsample",
+            "certificate_hash": "eaf139b8895560b9b599a262ff0c74f9219dcb6c"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:9de054261e2f560d",
+        "android_client_info": {
+          "package_name": "com.app.ckiict.igotmywork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:bf55d90096599c8b",
+        "android_client_info": {
+          "package_name": "com.app.glimpse.care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:4eb740f362344989",
+        "android_client_info": {
+          "package_name": "com.app.glimpses.manage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-libh8qersn34ec2r434tv00hr5ialffn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.glimpses.manage",
+            "certificate_hash": "d88391d78ffeb81160bc21f2a7fa325ad3c82039"
+          }
+        },
+        {
+          "client_id": "1013782717573-d39mj3lt1qnu5u528au90kr05kinnlsf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.glimpses.manage",
+            "certificate_hash": "2e8bbe5884e29fb5eee6f38df790eefe31399f80"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:7b18e7e1d3dd7941",
+        "android_client_info": {
+          "package_name": "com.artmania.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-f26cv3o5cfhs5h30lhq3f1lo9hpo3dhk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.artmania.app",
+            "certificate_hash": "0e15ebe9614a4b68e4369c4cec6c90d400aca683"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:6686d0f36715d636",
+        "android_client_info": {
+          "package_name": "com.ckiict.igotmywork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-dmngqs84o3i04a6him67lrfl134cmhq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ckiict.igotmywork",
+            "certificate_hash": "d88391d78ffeb81160bc21f2a7fa325ad3c82039"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:e820715bbb53ab710b75ec",
+        "android_client_info": {
+          "package_name": "com.comics.lounge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:18bcea976663aff00b75ec",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-jeenus6q3nfjgpmvv871v77fm419vpmo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.codelab.friendlychat",
+            "certificate_hash": "eaf139b8895560b9b599a262ff0c74f9219dcb6c"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:8992ad79e2ad9d14",
+        "android_client_info": {
+          "package_name": "com.homecleaner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:4b9259bee96d19dc",
+        "android_client_info": {
+          "package_name": "com.jadygallery.staggered"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-095cqlajv2ffpkcn4o4k6ack8rptdc9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jadygallery.staggered",
+            "certificate_hash": "0e15ebe9614a4b68e4369c4cec6c90d400aca683"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:dcfe1ae053e1d418",
+        "android_client_info": {
+          "package_name": "com.kbzapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-oh3s9fm1u0muhgqimv7br689403fcldn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kbzapp",
+            "certificate_hash": "eaf139b8895560b9b599a262ff0c74f9219dcb6c"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:96729a49be14b705",
+        "android_client_info": {
+          "package_name": "com.kbzapp.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-3j4u2j312ss9vmfvpu9eet0p04lr71tf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kbzapp.admin",
+            "certificate_hash": "eaf139b8895560b9b599a262ff0c74f9219dcb6c"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:f9c425d7e7b02231",
+        "android_client_info": {
+          "package_name": "com.kbzapp.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-bba29kngcmn9ohbgln8udheqjl8hg61q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kbzapp.delivery",
+            "certificate_hash": "eaf139b8895560b9b599a262ff0c74f9219dcb6c"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:62caf66fb3a69b90",
+        "android_client_info": {
+          "package_name": "com.mammam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:a0b70d17f99f0713",
+        "android_client_info": {
+          "package_name": "com.meao.webview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:ed20c647b22e5f22",
+        "android_client_info": {
+          "package_name": "com.minestomarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:d04bcfb33a67d8a3",
+        "android_client_info": {
+          "package_name": "com.photobook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-m9p7o9e9b54mp7j8i5q7t97083a8huja.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.photobook",
+            "certificate_hash": "d88391d78ffeb81160bc21f2a7fa325ad3c82039"
+          }
+        },
+        {
+          "client_id": "1013782717573-05kpuhu02kntepn3o9vi89nbdq95lrtg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.photobook",
+            "certificate_hash": "322d9f9a31ef0d62e53d75396f7c4db3a92348f0"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:e78f8feb28dffc36",
+        "android_client_info": {
+          "package_name": "com.pleazer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-n9pqe45psla3plfsi2rki0udc7teifob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pleazer",
+            "certificate_hash": "322d9f9a31ef0d62e53d75396f7c4db3a92348f0"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:7a356498d1592d3e",
+        "android_client_info": {
+          "package_name": "com.rnbgexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:11267bf6639bd52f",
+        "android_client_info": {
+          "package_name": "com.societyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-16j8j67v09180g693kdmjdacf3ogd4if.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.societyapp",
+            "certificate_hash": "322d9f9a31ef0d62e53d75396f7c4db3a92348f0"
+          }
+        },
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:f9024a864b9ed7280b75ec",
+        "android_client_info": {
+          "package_name": "test.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:01ded852bbb82b5e0b75ec",
+        "android_client_info": {
+          "package_name": "xyz.idtlabs.mikashboks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013782717573:android:70be37c5594e59f30b75ec",
+        "android_client_info": {
+          "package_name": "xyz.idtlabs.mikashboks.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0S6McKLy9Lfrh63mvjry0gdUUzdsGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013782717573-uleovbsv4cfh1qu4poa54c0phtfj5l1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013782717573-6vl3uphm03jhqh62coc1ls8k3c00qqj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.localReminder.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

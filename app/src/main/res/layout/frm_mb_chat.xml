@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FrmMbChat"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    android:paddingHorizontal="24dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/membership_manager_chat_room"
+        android:layout_marginTop="16dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dear_member_in_this_area_of_the_app_you_can_receive_notifications_and_messages_directly_from_your_membership_manager_you_can_discuss_bookings_events_and_special_offers_to_ensure_you_have_a_great_experience_at_the_comics_lounge"
+        android:layout_marginTop="15dp"
+        android:textSize="14dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/gray_1"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

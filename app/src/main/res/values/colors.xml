@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fe1277</color>
+    <color name="colorPrimaryDark">#A70C4E</color>
+    <color name="colorAccent">#fe1277</color>
+
+    <color name="black">#000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_60">#90FFFFFF</color>
+
+    <color name="login_btn_color">#fe1277</color>
+
+    <color name="edit_outline_clor">#afaeaf</color>
+
+    <color name="text_color">#4d4b4d</color>
+
+    <color name="calender_btn_bg_color">#00498F</color>
+
+    <color name="loader_back_light_transplant">#66000000</color>
+    <color name="black_85">#D9000000</color>
+    <color name="black_50">#80000000</color>
+
+    <color name="contact_us_edt_back_color">#EDECF1</color>
+
+    <color name="load_img_bg_color">#f0f0f0</color>
+    <color name="download_btn_colo">#00498f</color>
+    <color name="disable_input_color">#A7A7A7</color>
+    <color name="second_color">#434343</color>
+    <color name="disable_icon">#CACACA</color>
+    <color name="divider_color">#979797</color>
+    <color name="bg_splash">#EC027D</color>
+    <color name="gray_1">#646464</color>
+    <color name="gray_2">#676767</color>
+    <color name="grey_2">#BFBFBF</color>
+    <color name="grey_3">#8A8A8A</color>
+    <color name="grey_3_50">#808A8A8A</color>
+    <color name="grey_4">#F0F0F0</color>
+    <color name="grey_5">#F9F9F9</color>
+    <color name="grey_6">#F6F6F6</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_blue">#004990</color>
+    <color name="dark_blue2">#002447</color>
+    <color name="yellow">#FACB03</color>
+    <color name="yellow1">#FFA500</color>
+    <color name="yellow2">#FFCB22</color>
+    <color name="yellow3">#FCCB06</color>
+    <color name="brown">#80412A00</color>
+    <color name="grey">#E2E2E2</color>
+</resources>

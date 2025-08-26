@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.comics.lounge.activity.SplashScreenActivity"
+    android:background="@color/bg_splash">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_centerInParent="true" />
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:visibility="gone"
+        android:src="@drawable/ic_close" />
+
+</RelativeLayout>

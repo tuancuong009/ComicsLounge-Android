@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:paddingTop="10dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_day"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="11dp">
+        <TextView
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/tv_day"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

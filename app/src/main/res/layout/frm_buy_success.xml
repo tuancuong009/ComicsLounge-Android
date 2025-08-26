@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FrmBuySuccess"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:paddingHorizontal="24dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/dark_blue2"/>
+        <ImageView
+            android:layout_marginVertical="20dp"
+            android:layout_width="157dp"
+            android:layout_height="157dp"
+            android:src="@drawable/img_smile"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:paddingHorizontal="30dp"
+            android:layout_height="50dp"
+            android:id="@+id/bt_video"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_bt_blue"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/membership_video" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

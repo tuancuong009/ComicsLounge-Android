@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FrmBecomeMb"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingHorizontal="24dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/become_a_member"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rcv"/>
+    <ProgressBar
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/pb_loading"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:paddingHorizontal="30dp"
+        android:layout_height="50dp"
+        android:id="@+id/bt_code"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/redeem_activation_code" />
+</androidx.appcompat.widget.LinearLayoutCompat>

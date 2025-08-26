@@ -1,0 +1,47 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="event_banner_image_height">350dp</dimen>
+    <dimen name="confim_code_heading_top_margin">40dp</dimen>
+    <dimen name="otp_varification_confim_heading_top_or_buttom_margin">18dp</dimen>
+    <dimen name="otp_varification_country_code_txt_top_or_bottom_margin">18dp</dimen>
+    <dimen name="otp_varification_heading_txt_size">15sp</dimen>
+    <dimen name="event_list_buttom_padding_desc">18dp</dimen>
+    <dimen name="left_menu_app_icon_height">150dp</dimen>
+    <dimen name="top_header_logo_width">95dp</dimen>
+    <dimen name="screen_heder_height">80dp</dimen>
+    <dimen name="screen_heder__margin_start">14dp</dimen>
+    <dimen name="heder_heading_txt_size">21sp</dimen>
+    <dimen name="header_nav_icon_wid_hei">40dp</dimen>
+    <dimen name="header_nav_icon_margin_end">15dp</dimen>
+    <dimen name="header_nav_icon_padding">8dp</dimen>
+    <dimen name="date_no_width">95dp</dimen>
+    <dimen name="back_arrow_img_size">20dp</dimen>
+    <dimen name="booking_history_font_size">17sp</dimen>
+    <dimen name="ticket_counter_size">15sp</dimen>
+    <dimen name="ticket_plus_minus_icon_size">40dp</dimen>
+    <dimen name="ticket_plus_minus_icon_padding">6dp</dimen>
+    <dimen name="ticket_counter_txt_width">70dp</dimen>
+    <dimen name="event_detail_font_size">14sp</dimen>
+    <dimen name="event_detail_heaind_font">19sp</dimen>
+    <dimen name="booking_his_cell_title_font_size">19sp</dimen>
+    <dimen name="booking_his_cell_date_font_size">17sp</dimen>
+    <dimen name="booking_his_cell_margin_top">6dp</dimen>
+    <dimen name="contact_us_heading_txt_style">19sp</dimen>
+    <dimen name="contact_us_value_txt_size">17sp</dimen>
+    <dimen name="member_ship_image_height">190dp</dimen>
+    <dimen name="membership_cell_title_txt_style">22sp</dimen>
+    <dimen name="membership_cell_price_txt_style">17sp</dimen>
+    <dimen name="home_event_layout_width">410dp</dimen>
+    <dimen name="save_btn_txt_size">16sp</dimen>
+    <dimen name="left_nav_menu_txt_size">18sp</dimen>
+    <dimen name="left_nav_menu_icon_size">29dp</dimen>
+    <dimen name="calender_cell_list_title_txt_size">19sp</dimen>
+    <dimen name="calender_cell_list_date_txt_size">17sp</dimen>
+    <dimen name="calender_month_name_txt_size">19sp</dimen>
+    <dimen name="video_cell_txt_size">18sp</dimen>
+    <dimen name="video_cell_height">370dp</dimen>
+    <dimen name="left_menu_item_height">65dp</dimen>
+    <dimen name="home_event_des_txt_size">17sp</dimen>
+    <dimen name="home_current_event_top_heading_txt_size">22sp</dimen>
+</resources>

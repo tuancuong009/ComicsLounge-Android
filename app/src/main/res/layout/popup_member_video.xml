@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <WebView
+        app:use_controller="false"
+        android:background="@color/white"
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/bt_close"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:tint="@color/colorAccent"
+        android:src="@mipmap/ic_circle_close"/>
+</RelativeLayout>

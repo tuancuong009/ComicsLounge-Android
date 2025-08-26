@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llMainLayout"
+    tools:context=".activity.ShareMembershipActivity">
+
+<!--    <include android:id="@+id/tb" layout="@layout/toolbar" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/bt_back"
+                android:src="@mipmap/ic_back"
+                android:layout_width="29dp"
+                android:layout_height="29dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/share_membership_str"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="24dp"
+            android:id="@+id/tbShareHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabIndicatorHeight="1dp"
+            app:tabIndicatorColor="@color/bg_splash"
+            app:tabGravity="center"
+            app:tabTextColor="@color/grey_3"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/bg_splash"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp2Share"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <!--<ViewSwitcher
+        android:id="@+id/vsShareMembershipLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:id="@+id/llMembershipView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShareMembership"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:scrollbars="vertical"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/llNoDataFound"
+                style="@style/not_found_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_not_found_long_str"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/progress_view_layout" />
+
+    </ViewSwitcher>-->
+
+</LinearLayout>

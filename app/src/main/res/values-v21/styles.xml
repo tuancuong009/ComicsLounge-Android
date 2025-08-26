@@ -1,0 +1,46 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SubmitButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/save_btn_txt_size</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="CalenderButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/calender_btn_bg_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:layout_width">235dp</item>
+        <item name="android:layout_height">61dp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="AppHeaderNameStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/heder_heading_txt_size</item>
+        <!--<item name="android:layout_marginStart">@dimen/header_heading_margin_start</item>-->
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+
+</resources>

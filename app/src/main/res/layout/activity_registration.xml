@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.comics.lounge.activity.RegistrationActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_around_here"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_gravity="center_horizontal"/>
+        <LinearLayout
+            android:layout_marginTop="36dp"
+            android:id="@+id/llContentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_f_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_first_name"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/event_detail_font_size" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ip_f_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="outline"
+                    app:errorEnabled="true"
+                    app:errorTextColor="@color/red"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:inputType="textCapSentences"
+                        android:id="@+id/name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_edt"
+                        android:fontFamily="@font/roboto"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@drawable/edt_txt_cursor"
+                        android:textSize="14dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_l_name_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/enter_last_name"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/event_detail_font_size" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ip_l_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="outline"
+                    app:errorEnabled="true"
+                    app:errorTextColor="@color/red"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textCapSentences"
+                    android:id="@+id/last_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_edt"
+                    android:fontFamily="@font/roboto"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/edt_txt_cursor"
+                    android:textSize="14dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_email_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/enter_email_add_heading"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/event_detail_font_size" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ip_email"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="outline"
+                    app:errorEnabled="true"
+                    app:errorTextColor="@color/red"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edt"
+                    android:fontFamily="@font/roboto"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/edt_txt_cursor"
+                    android:textSize="14dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_pw_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/gray_1"
+                    android:textSize="@dimen/event_detail_font_size"
+                    android:text="@string/enter_pass_add_heading" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ip_pw"
+                    app:endIconMode="password_toggle"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconTint="@color/grey_3"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="outline"
+                    app:errorEnabled="true"
+                    app:errorTextColor="@color/red"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edt"
+                    android:fontFamily="@font/roboto"
+                    android:inputType="textPassword"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/edt_txt_cursor"
+                    android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/is_checkbox"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:background="@drawable/cb_selector"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/gray_2"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginBottom="17dp"
+                    android:id="@+id/sign_up_btn"
+                    android:layout_width="235dp"
+                    android:layout_height="61dp"
+                    android:background="@drawable/bg_button"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:shadowColor="@android:color/transparent"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/have_an_account_str"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sign_in_txt_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="?selectableItemBackground"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/login_str"
+                        android:textColor="@color/login_btn_color"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTerm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

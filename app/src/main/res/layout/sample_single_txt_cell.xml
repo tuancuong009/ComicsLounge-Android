@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center|left"
+   >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_spn_cell"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/loading_str"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        />
+
+</LinearLayout>

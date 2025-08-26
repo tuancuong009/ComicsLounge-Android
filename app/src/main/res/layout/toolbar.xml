@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:http="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="?actionBarSize"
+    android:title=""
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:elevation="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <LinearLayout
+        style="@style/AppHeaderMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/toolbar_logo_layout"
+            android:layout_width="@dimen/top_header_logo_width"
+            android:layout_height="@dimen/screen_heder_height">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/toolbar_app_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/screen_heder__margin_start"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_app_name_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/home_current_event_top_heading_txt_size"
+            android:text="@string/app_name" />
+
+        <View
+            android:id="@+id/viewEmptySpace"
+            android:visibility="gone"
+            android:layout_width="70dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:id="@+id/llRightMenu"
+            android:layout_width="@dimen/top_header_logo_width"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_skip_name_txt"
+                style="@style/AppHeaderNameStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skip_small_str"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:visibility="gone" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/menuRight"
+                style="@style/AppHeaderNavIconStyle"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>

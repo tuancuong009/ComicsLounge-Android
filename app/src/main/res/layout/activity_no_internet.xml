@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_internet_not_found"
+            >
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet_connection_str"
+            android:fontFamily="@font/roboto"
+            android:textSize="19dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet_connection_str_msg"
+            android:fontFamily="@font/roboto"
+            android:textSize="14dp"
+            android:textColor="@color/black_85"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/no_internet_btn_btn_radius"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retry_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/retry_str"
+                android:fontFamily="@font/roboto"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                app:fontFamily="@font/roboto"
+                android:layout_marginBottom="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                />
+        </LinearLayout>
+
+<!--        android:foreground="?selectableItemBackgroundBorderless"-->
+    </LinearLayout>
+
+</LinearLayout>

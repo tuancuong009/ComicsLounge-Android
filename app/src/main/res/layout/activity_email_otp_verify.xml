@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/btn_home"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="end"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:src="@drawable/ic_home"
+        app:tint="@color/black_85" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/email_confirm_code_str"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvConfirmationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="@string/enter_code_email"
+        android:textAlignment="center"
+        android:textColor="@color/gray_1"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/enter_email_code"
+            android:textColor="@color/gray_1"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14dp" />
+        <com.ozcanalasalvar.otp_view.view.OtpView
+            android:id="@+id/edt_otp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:activeColor="@color/white"
+            app:autoFocusEnabled="true"
+            app:digits="4"
+            app:passiveColor="@color/grey_4"
+            app:keyboardType="number"
+            app:textColor="@color/bg_splash"
+            app:textSize="25"
+            app:fontFamily="@font/poppins_semibold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResentOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/resent_otp"
+        android:textColor="@color/bg_splash"
+        android:textSize="14dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_gravity="center"
+        android:layout_width="235dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/bg_button"
+        android:text="@string/confirm" />
+</LinearLayout>

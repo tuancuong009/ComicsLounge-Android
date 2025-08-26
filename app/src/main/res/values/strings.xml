@@ -1,0 +1,514 @@
+<resources>
+    <!--    <string name="app_name">ComicApp</string>-->
+    <string name="app_name">The Comics Lounge</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="app_version">The Comics Lounge v%1$s</string>
+
+    <!--APP string-->
+    <string name="login_btn_name">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="reg_agree_policy">I Agree to the terms of use</string>
+    <string name="have_an_account_str">Have an account?</string>
+    <string name="dont_have_ac">Don\'t have an account?</string>
+    <string name="forgotusername_password_str">Forgot your password?</string>
+    <string name="enter_email_add_heading">Enter Your Email Address</string>
+    <string name="enter_promo_code">Enter Promo Code</string>
+    <string name="enter_pass_add_heading">Enter Your Password</string>
+    <string name="login_btn_join_name">Login</string>
+    <string name="enter_name_add_heading">Enter Your Name</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="sign_in_str">Sign in</string>
+    <string name="forgotpass_dummy_str">We\'ll send you a OTP to reset it</string>
+    <string name="register_email_add_heading">Registered Email</string>
+    <string name="reser_str">Reset</string>
+    <string name="resent_otp">Resend OTP?</string>
+    <string name="know_password_str">Know your password?</string>
+    <string name="current_event_str">Current Events</string>
+    <string name="get_ticket">Get Tickets</string>
+    <string name="calender_str">Calendar</string>
+    <string name="suber_admin_str">Super User</string>
+    <string name="dooor_open_str">DOORS OPEN:</string>
+    <string name="dinner_str">DINNER:</string>
+    <string name="show_str">SHOW:</string>
+    <string name="descrition_str">DESCRIPTION</string>
+    <string name="mobile_num_heading_str">Mobile Number?</string>
+    <string name="mbile_num_enter_str">Enter your mobile number here to receive confirmation code</string>
+    <string name="country_code_str">Country Code</string>
+    <string name="enter_mobile_no_str">Enter Mobile Number</string>
+    <string name="save_str">Save</string>
+    <string name="email_confirm_code_str">Confirmation Email Code?</string>
+    <string name="confirm_code_str">Confirmation Code ?</string>
+    <string name="enter_confirm_code_str">Enter code for your Mobile Number Confirmation</string>
+    <string name="enter_code_email">Enter OTP code sent to your email \n%s</string>
+    <string name="enter_sms_code_str">Enter SMS Code</string>
+    <string name="enter_email_code">Enter Email Code</string>
+    <string name="done_str">Done</string>
+    <string name="login_str">Log In</string>
+    <string name="forgot_pasword_sec_str">Forgot Password</string>
+    <string name="pls_try_again_str">Please try again</string>
+    <string name="loding_str">Loading…</string>
+    <string name="loading_str">Loading…</string>
+    <string name="do_not_exit_str">Do not exit app before confirm your account?</string>
+    <string name="otp_verfy_done">OTP verify successfully.</string>
+    <string name="submit_str">Submit</string>
+    <string name="contact_us_add_str">Level 1,26 Errol Street, North \nMelbourne 3051</string>
+    <string name="app_email_str">info@thecomicslounge.com.au</string>
+    <string name="app_phone_str">(03) 9348 9488</string>
+    <string name="booking_history">Booking History</string>
+    <string name="confirmed_tickets">Confirmed Tickets</string>
+    <string name="ticket_details">Ticket Details</string>
+    <string name="contact_us_heading">Contact us</string>
+    <string name="super_user_str">Super User</string>
+    <string name="membership_str">Membership</string>
+    <string name="free_ticket_str">Free Tickets</string>
+    <string name="my_membership_tickets">Use My Membership Tickets</string>
+    <string name="non_attendance_penalty">Non Attendance Penalty</string>
+    <string name="first_last_name_str"><![CDATA[First & Last name]]></string>
+    <string name="phone_str">Phone Number</string>
+    <string name="password_str">Password</string>
+    <string name="logout_str">Log Out</string>
+    <string name="buy_tickets_str">Buy Tickets</string>
+    <string name="select_dates_str">Select Date</string>
+    <string name="tickets_type_str">Ticket Type</string>
+    <string name="feat_video_str">Featured Videos</string>
+    <string name="terms_condition_str">Terms Of Conditions</string>
+    <string name="privacy_policy_str">Privacy Policy</string>
+    <string name="member_ship_str">Buy Membership</string>
+    <string name="checkout_str">Checkout</string>
+    <string name="my_booking_str">My Booking</string>
+    <string name="sub_total_str">SUBTOTAL</string>
+    <string name="discount_str">Discount</string>
+    <string name="tax_str">GST</string>
+    <string name="total_str">Total:</string>
+    <string name="zero_str">$0.00</string>
+    <string name="process_to_pay">Process To Pay</string>
+    <string name="join_membership">Join Membership</string>
+    <string name="ticket_details_str">Tickets Details</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="download_tic">Download Tickets</string>
+    <string name="show_only">Show Only</string>
+    <string name="show_with_meal_str">Show with Meal</string>
+    <string name="cancel_str">Cancel</string>
+    <string name="zoom_image_view">Image</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="enter_firstname_strr">Enter Your Firstname</string>
+    <string name="enter_phon_no_str">Enter Your Phone Number</string>
+    <string name="enter_country_code_str">Enter Your Country Code</string>
+    <string name="update_profile_str">Update</string>
+    <string name="apply">Apply</string>
+    <string name="gold_pass_ticket">Gold Pass Tickets available for this show</string>
+    <string name="pls_select_date">Please select date</string>
+    <string name="pls_add_ticket">Please add ticket</string>
+    <string name="data_not_found_long_str">Unfortunately data not found.</string>
+    <string name="server_error_">An error occurred during connection with server, please again later!!!</string>
+    <string name="working_internet_connection">Make sure you have working internet connection</string>
+    <string name="no_internet_connection_str">No Internet Connection</string>
+    <string name="no_internet_connection_str_msg">You are not connected to the Internet.Make sure WI-FI or Mobile Network is on, Airplane Mode is off and Retry it</string>
+    <string name="retry_str">Retry</string>
+    <string name="internet_not_found_str">Internet connection not found</string>
+    <string name="action_not_found_str">Action not found</string>
+    <string name="skip_str">SKIP</string>
+    <string name="new_around_user">New around here?</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="pls_select_before_close_date">Only book before event close date</string>
+    <string name="someting_wrong">Something wrong try again.</string>
+    <string name="ticket_not_avilble">ticket not available</string>
+    <string name="paypal_success_value">Paypal Success</string>
+    <string name="paypal_error_value">Paypal Error: %1$s</string>
+    <string name="paypal_error_buyer_cancelled">Buyer canceled payment approval.</string>
+    <string name="paypal_error_other_error">Other Error</string>
+    <string name="server_error">Server Error</string>
+    <string name="skip_small_str">Skip</string>
+    <string name="update_available">New Version Available</string>
+    <string name="update">UPDATE</string>
+    <string name="no_thanks">NO, THANKS</string>
+    <string name="no_membership_purchased">No membership purchased</string>
+    <string name="no_free_tickets">You have no free tickets</string>
+    <string name="current_password">Enter Your Current Password</string>
+    <string name="new_password">Enter Your New Password</string>
+    <string name="re_new_password">Re-type Your New Password</string>
+    <string name="password_not_match">Re-type Does Not Match With New Password</string>
+    <string name="Change">Change</string>
+    <string name="change_pwd">Change Password</string>
+    <string name="video">Video</string>
+    <string name="reset_pwd">Reset Password</string>
+    <string name="email_sent">Email has been sent !!</string>
+    <string name="email_sent_invalid">Email id is invalid !!</string>
+    <string name="otp_validate">OTP is empty</string>
+    <string name="email_not_blank">Email cannot be blank.</string>
+    <string name="password_not_blank">Password cannot be blank</string>
+    <string name="email_otp_verified">OTP verified successfully !!!</string>
+    <string name="password_validation">Password must have 6 to 20 char, include 1 digit</string>
+    <string name="enter_valid_email">Please enter a valid email</string>
+    <string name="login_failed">Login failed please try again</string>
+    <string name="membership_buy">Membership Buy</string>
+    <string name="promo_code_applied_value">Congratulations !! You got %1$s discount.</string>
+    <string name="free_ticket_title">Free Ticket Info</string>
+    <string name="free_ticket_info">One free pass for 2 people can be used as part of this booking.\n\n* limited to one free pass per booking</string>
+    <string name="tickets_can_only">Tickets can only purchase before 6pm for each days event.</string>
+    <string name="enquiries">please contact our office on 03 9348 9488 between 11am and 5:30pm </string>
+    <string name="updating_moment">Wait for a moment, We are updating...</string>
+
+    <string-array name="nav_menu_array">
+        <item>Home</item>
+        <item>Confirmed Tickets</item>
+        <item>Calendar</item>
+        <item>Membership video</item>
+        <item>Buy Membership</item>
+        <item>Claim Membership</item>
+        <item>My Account</item>
+        <item>Contact Us</item>
+        <item>Booking History</item>
+        <item>Terms and Conditions</item>
+        <!--       KB added to add new privacy policy menu-->
+        <item>Privacy Policy</item>
+        <item>Logout</item>
+    </string-array>
+    <string name="title_activity_location_map">Map</string>
+    <string name="we_locat_here">We\'re Located</string>
+    <string name="google_map_address_str">"The Comic's Lounge \n28 errol street \nnorth bourne \n(03) 93483488"</string>
+    <string name="for_twl_month_str">for 12 months</string>
+    <string name="error_for_name">Please enter characters or alphabet in the name field</string>
+    <string name="enter_8_above_num">Number must above 8 digits.</string>
+    <string name="bookig_date_not_available">Booking date not available</string>
+    <string name="pls_check_term_condition">Please check \"Terms and Conditions\"</string>
+    <string name="before_register">Warning: Please confirm entered mobile number and Email address are valid</string>
+    <string name="share_membership_str">Share Membership</string>
+    <string name="share_membership_que_str">Share Membership?</string>
+    <string name="share_str">Share</string>
+    <string name="shre_information_str">Share Detail</string>
+    <string name="mobile_nom_not_blank">Mobile number cannot be blank</string>
+    <string name="mobile_number_length_error">Mobile number length between 6 to 10</string>
+    <string name="membership_share">Membership Share</string>
+    <string name="free_events">Free Events</string>
+    <string name="free_event_restored">Free Event Restored</string>
+    <string name="event_count_allowed">Event Count Allowed</string>
+    <string name="event_count_left">Event Count Left</string>
+    <string name="share_membership_list_str">Share Membership List</string>
+    <string name="country_code_val_str">+61</string>
+    <string name="select_time_str">Select Time</string>
+    <string name="pls_select_time">Please select time</string>
+    <string name="gift_membership_str_que">"Membership Gift for Other Person?"</string>
+    <string name="gif_membership_dtails">"You are purchasing this Membership for another person.
+Simply provide the EMAIL and MOBILE of the person receiving the Membership.
+They will be sent their Membership access details.  "</string>
+    <string name="error_str">Error</string>
+    <string name="gift_membership_error_str">You already purchase this membership. you can share as Gift to family and friends.</string>
+    <string name="show_only_new">Show Only:</string>
+    <string name="show_with_meal_qty">Show With Meal:</string>
+    <string name="booking_charge">Booking Charge:</string>
+    <string name="country_str">Country</string>
+    <string name="austraria_str">Australia</string>
+    <string name="stae_str">State / Province / Region</string>
+    <string name="city_str">City</string>
+    <string name="ccity_cannot_be_blank">City cannot be blank</string>
+    <string name="gifted_membership_str">Gifted Membership</string>
+    <string name="shared_membership_str">Shared Membership</string>
+    <string name="membership_active_details_txt">Congratulations on receiving your 12-month membership to the Comic Lounge. Simply add the registration number you were sent by email or SMS to activate your membership.</string>
+    <string name="enter_your_code_here_str">ENTER YOUR CODE HERE</string>
+    <string name="active_my_membership_str">Activate My Membership</string>
+    <string name="enter_lastname_str">Enter Your Lastname</string>
+    <string name="gift_membership_str">Gift Membership</string>
+    <string name="code_cannot_be_blank">Code cannot be blank</string>
+    <string name="my_membership_str">My Membership</string>
+    <string name="claim_membership_str">Claim Gift Membership</string>
+    <string name="not_have_free_ticket">Tickets can only purchase before 6pm for each days event</string>
+    <string name="free_ticket_over">Ticket sold in this day</string>
+    <string name="membership_exired">Your membership expired</string>
+    <string name="buy_membership">Buy Membership</string>
+    <string name="membership_exired_in">Your membership expired In</string>
+    <string name="you_buy_membership">You can now buy membership</string>
+    <string name="renew_membership">Renew Membership</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="payment_error1">[Http 400] Unable to create Record:The \u0022To\u0022 number</string>
+    <string name="payment_error2">is not a valid phone number </string>
+    <string name="this_field_is_required">This field is required</string>
+    <string name="new_around_here">New around here?</string>
+    <string name="login">Log in</string>
+    <string name="reset">Reset</string>
+    <string name="mobile_number">Mobile Number?</string>
+    <string name="_61">+61</string>
+    <string name="confirm">Confirm</string>
+    <string name="calendar">Calendar</string>
+    <string name="menu">Menu</string>
+    <string name="my_account">My Account</string>
+    <string name="become_a_member">Become a Member</string>
+    <string name="gallery">Gallery</string>
+    <string name="offers">Offers</string>
+    <string name="contacts">Contacts</string>
+    <string name="concierge">Concierge</string>
+    <string name="saved_events">Saved Events</string>
+    <string name="membership_video">Membership Video</string>
+    <string name="claim_membership">Claim Membership</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="delete_my_account">Delete My Account</string>
+    <string name="the_comics_lounge_v3_3">The Comics Lounge v3.3</string>
+    <string name="description">Description</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="sat">Sat</string>
+    <string name="fri">Fri</string>
+    <string name="please_press_back_again_to_exit">Please press Back again to exit</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="select_date">Select Date</string>
+    <string name="ticket_type">Ticket Type</string>
+    <string name="show_only1">Show Only:</string>
+    <string name="show_with_meal">Show With Meal:</string>
+    <string name="total">Total:</string>
+    <string name="gold_pass_tickets_are_available_for_this_show">GOLD PASS TICKETS ARE AVAILABLE FOR THIS SHOW.</string>
+    <string name="best_of_the_comedy_festival">Best Of The Comedy Festival</string>
+    <string name="use_my_membership_tickets">Use my membership tickets</string>
+    <string name="discount">Discount:</string>
+    <string name="booking_charge1">Booking Charge:</string>
+    <string name="type_your_city_here">Type your city here</string>
+    <string name="paypal">PayPal</string>
+    <string name="credit_or_debit_card">Credit or Debit Card</string>
+    <string name="please_select_date">Please select date</string>
+    <string name="_4_95">$4.95</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="refer_a_friend">Refer a friend</string>
+    <string name="invite_your_friend_to_the_comic_s_lounge">invite your friend to the comic’s lounge!</string>
+    <string name="share_the_link">Share the link</string>
+    <string name="level_1_26_errol_street_north_melbourne_3051">Level 1, 26 Errol Street, North Melbourne 3051</string>
+    <string name="_03_9348_9488">(03) 9348 9488</string>
+    <string name="info_thecomicslounge_com_au">info@thecomicslounge.com.au</string>
+    <string name="for_bookings_and_enquiries_please_contact_between_11am_and_5_30pm">For Bookings and Enquiries, please contact between 11AM and 5.30PM</string>
+    <string name="type_your_code_here">Type your code here</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="download">Download</string>
+    <string name="enter_your_current_password">Enter Your Current Password</string>
+    <string name="enter_your_new_password">Enter Your New Password</string>
+    <string name="re_type_your_new_password">Re-type Your New Password</string>
+    <string name="password_cannot_be_blank">Password cannot be blank</string>
+    <string name="the_new_password_cannot_be_the_same_as_the_old_password">The new password cannot be the same as the old password.</string>
+    <string name="the_new_password_doesn_t_match">The new password doesn\'t match</string>
+    <string name="gold_pass_membership">GOLD PASS MEMBERSHIP</string>
+    <string name="gold_membership">Gold Membership</string>
+    <string name="mb_des_2">Each ticket used from your membership is two people for 1 year from month of purchase.</string>
+    <string name="mb_des_3">We have the best comedians from Australia and around the world plus a variety of support acts for bonus laughs.</string>
+    <string name="mb_des_4">Open 6 nights a week - book up to 3 shows in advance.</string>
+    <string name="mb_des_6">A great night out with mates, family, visiting relies, for special occasions or just because!</string>
+    <string name="_99_for_12_months"><![CDATA[<font color=#EC027D>$99</font>]]> for 12 months</string>
+    <string name="mb_des_1">The Comic’s Lounge <![CDATA[<font color=#EC027D>Gold Membership Card</font>]]> provides a whole year of side-splitting comedy.</string>
+    <string name="mb_des_5">Use your <![CDATA[<font color=#EC027D>Gold Pass</font>]]> on its own or as part of a group ticket purchase.</string>
+    <string name="mb_des_7"><![CDATA[<font color=#EC027D>Please Note - New Membership</font>]]> will be valid for 12 months from our re-opening</string>
+    <string name="dinner_deals">Dinner Deals</string>
+    <string name="starters">STARTERS</string>
+    <string name="mains">MAINS</string>
+    <string name="house_made_desserts">House made desserts</string>
+    <string name="pizza">Pizza</string>
+    <string name="nachos">Nachos</string>
+    <string name="snacks_to_share_or_not">snacks to share or not</string>
+    <string name="drinks_treats"><![CDATA[drinks & treats]]></string>
+    <string name="at_the_bar">at the bar</string>
+    <string name="download_our_menu">Download Our Menu</string>
+    <string name="membership_concierge">Membership Concierge</string>
+    <string name="q_amp_a"><![CDATA[Q & A]]></string>
+    <string name="contact_our_team">Contact our team</string>
+    <string name="function_and_events">Function and Events</string>
+    <string name="update_or_change_my_membership_details">Update or change my Membership details</string>
+    <string name="help_using_my_membership">Help using my Membership</string>
+    <string name="accessibility_to_the_venue">Accessibility to the Venue</string>
+    <string name="remember_this_card">REMEMBER THIS CARD</string>
+    <string name="card_number">Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="pay">Pay</string>
+    <string name="type_your_message_here">Type your message here</string>
+    <string name="message_can_t_blank">Message can\'t blank</string>
+    <string name="no_gallery">No Gallery</string>
+    <string name="saved">saved</string>
+    <string name="permission_write_external_storage_denied">Permission Access Device Image denied</string>
+    <string name="purchase_date">Purchase Date:</string>
+    <string name="expire_in">Expire in</string>
+    <string name="membership_list">Membership List</string>
+    <string name="permission_call_phone_denied">Permission Call Phone Denied</string>
+    <string name="no_favorites">No Favorites</string>
+    <string name="no_menu">No Menu</string>
+    <string name="click_here_to_enter_tonight_s_prize_draw">Click here to Enter Tonight’s Prize Draw!</string>
+    <string name="dear_guest_please_enter_your_table_number_and_push_okay_to_enter">Dear Guest, please\nenter your table number and push\nOkay to enter.</string>
+    <string name="ok">Ok</string>
+    <string name="please_enter_table_number">Please enter table number</string>
+    <string name="press_here_to_enter_tonight_s_prize_draw">Press here to enter tonight’s Prize Draw!</string>
+    <string name="please_enter_your_table_number_below_amp_push_okay_to_enter_tonights_prize_draw"><![CDATA[Please enter your table number below & push okay to enter tonights prize draw]]></string>
+    <string name="prize_draw">Prize Draw</string>
+    <string name="show_these_coupons_to_a_staff_member_at_the_bar_to_claim_your_special_offer">Show these coupons to a staff member at the bar to claim your special offer</string>
+    <string name="you_must_be_a_gold_member_to_access_these_exclusive_deals">You must be a Gold Member to access\nthese exclusive deals</string>
+    <string name="join_now_to_unlock">Join now to unlock</string>
+    <string name="join_now">Join now</string>
+    <string name="free_bucket_of_red_bull_for_your_table_nwith_the_purchase_of_any_3_coarse_meal">Free bucket of Red Bull for your table!\nWith the purchase of any 3 coarse meal</string>
+    <string name="special_offers">Special offers</string>
+    <string name="gold_member_offers">Gold Member Offers</string>
+    <string name="invite_a_friend">Invite a friend</string>
+    <string name="gold_pass_accessible">Gold Pass Accessible!</string>
+    <string name="search">Search</string>
+    <string name="members_chat_service">Members Chat Service</string>
+    <string name="answer">Answer</string>
+    <string name="members_only_special">Members Only Special</string>
+    <string name="invite_a_friend_and_receive_a_drink_voucher_for_20">Invite a friend and receive a drink voucher for $20</string>
+    <string name="no_histories">No Histories</string>
+    <string name="no_video">No Videos</string>
+    <string name="no_photo">No Photos</string>
+    <string name="term_des_1">These Terms and Conditions outline the rules for using our website, mobile website and or mobile application known here as (“Our Sites”). Please, read the following Terms and Condition carefully before visiting our website, mobile website, mobile application and/or using our services including purchasing our Gold Pass Membership. Our Sites are owned and operated by The Comic’s Lounge Pty Ltd (the “Comic’s Lounge”, Company, “we”, “us”). By using or visiting Our Sites, it is conditional upon your acceptance and compliance with the Terms and Conditions, notices and disclaimers contained here and elsewhere on Our Sites (collectively as “Terms and Conditions” or “Terms”).\n\nThese Terms and Conditions apply to all visitors, users. Members and other who access or use Our Sites. Your use and/or access to Our Sites and Services constitutes your agreement to the Terms and Conditions. By selecting to use the Our Sites Services, you (as user) express your agreement to these Terms and Conditions as well as to future changes which can be made to these Terms in the process of your further usage\n\nWe reserve the right to change these Terms and Conditions at any time, effective immediately upon posting on Our Sites. Please check this page on Our Sites for the Terms periodically. If you do not agree to these Terms, please not use Our Sites.</string>
+    <string name="our_site_and_services">Our Site and Services</string>
+    <string name="term_des_2">We may update and change Our Sites from time to time to reflect changes and/or improve to our services for our user’s needs and our business priorities. We will try to give you reasonable notice of any major changes. We do not guarantee that Our Sites, or any content on it, will always be available or be uninterrupted. We may suspend or withdraw or restrict the availability of all or any part of Our Sites for business and operational reasons.\n\nOur Sites are directed to people residing in Australia. We do not represent that content available on or through Our Sites is appropriate for use or available in other locations. The content on Our Sites is provided for general information only. Although we make reasonable efforts to update the information on Our Sites, we make no representations, warranties, or guaranties, whether express or implied, that the content on Our Sites is accurate or up to date.\n\nOur Sites may include information and material uploaded or created by other users. this information and these materials have not been verified or approved by us. The views expressed by other users on Our Sites do not represent our views or values. If you wish to complain about information and materials uploaded or created by other users, please contact us at</string>
+    <string name="customerservice_thecomicslounge_com_au"><u>contact@thecomicslounge.com.au</u>.</string>
+    <string name="subscription_registration_and_membership_account">Subscription, Registration and Membership Account</string>
+    <string name="term_des_3"><![CDATA[During the process of registration for our newsletter or a Gold Pass Membership for yourself or as a gift for you or another person, you (the “User”) will be requested to submit contact details and information such as full name, postal address, email address, detailed payment method information, and will be asked to select a unique password for the account created.\n\nWe email all our newly registered users and customers a welcome email. This is done to verify their password and username. It’s very important that when you submit your email address, make sure that it is an active and working one. This is going to be the email address where you will receive email notifications from us containing your download links, purchase confirmation, support, product notices and any other relevant updates regarding transactions executed by the User.\n\nTo the extent required you agree to provide true, accurate, current, and complete information about yourself as prompted by any subscription form and/or any registration form on Our Sites.  If any information provided by you is untrue, inaccurate, not current, or incomplete, we reserve the right to terminate your subscription or account and refuse all current or future use of the Service in our sole discretion.  When you register with us, you accept responsibility for all activities that occur under your account or password and you agree you will not sell, transfer, or assign your membership or any membership rights. You may terminate your account at any time, for any reason.]]></string>
+    <string name="privacy_and_cookies">Privacy and Cookies</string>
+    <string name="term_des_4"><![CDATA[Privacy is very important to us. We have a separate policy about it that you should read. We use cookies on Our Sites to collect data about visitors. For information about how The Comic’s Lounge and its affiliates collect, use, and share your personal data, cookies, please read our Privacy Policy.\n\nBy using Our Sites, you agree that we may use your personal data in accordance with our Privacy Policy.  By using Our Sites, you consent to The Comic’s Lounge processing and transferring the user data as necessary for us to provide you with this service and enable you to use Our Sites and receive our services. Such user’s information is used to execute an agreement with you as described in these Terms and Conditions.]]></string>
+    <string name="ticket_purchasing">Ticket Purchasing</string>
+    <string name="term_des_5"><![CDATA[The Comic’s Lounge provides ticketing services, including the sale and distribution of tickets, this may include agents for the venue, promoters, or any person responsible for holding the relevant event. By purchasing a ticket from The Comic’s Lounge, you agree to be bound by these Terms and Conditions.\n\nThe sale or purchase of tickets to entertainment events is regulated by certain states and cities. You may be asked to provide information during processes you engage in on the Our Sites. You represent and warrant that all information you provide will be true, complete, and correct, and that you will update all information as it changes. You also acknowledge that complying with laws is your responsibility, AND YOU AGREE NOT TO HOLD US LIABLE FOR YOUR FAILURE TO COMPLY WITH ANY LAW OR OUR FAILURE TO NOTIFY YOU OF, OR PROPERLY APPLY, ANY LAW. WE WILL COMPLY WITH LAW ENFORCEMENT AND MAY PROVIDE THEM WITH ALL INFORMATION YOU SUBMIT TO US TO ASSIST IN ANY INVESTIGATION OR PROSECUTION THEY MAY CONDUCT. If we are unable to verify or authenticate any information or tickets you provide during any registration, ordering, purchase, ticket posting, sale, authentication, delivery, payment or remittance process, or any other process, or if we are no longer able to verify or authorize your credit card or bank account information, you may be prohibited from using Our Sites.\n\nEach ticket is also sold subject to any additional terms and conditions of the Seller for the events.   These Terms and Conditions may be disclosed as part of the event information on the Site and at The Comic’s Lounge agents and outlets at the time of purchase or user’s request.]]></string>
+    <string name="term_des_6"><![CDATA[The Comic’s Lounge Gold Pass Membership is available for purchase and are valid for a 12-month period from date-of-purchase and is non-refundable. Gold Pass members (Members) are entitled to book events and receive complimentary tickets for selected events, each ticket booked will be for 2 people and will not include meals.\n\nMembers can book up to 2 shows in advance via the mobile app, members will receive alerts reminding them to confirm or cancel their complimentary tickets, if a member confirms and books a ticket and does not attend, at the discretion of The Comics Lounge Management, they may be restricted to 2 bookings in advance, if this is repeated a second time, Members who confirm and books tickets and do not attend after several cancellations may have their membership suspended to 3 months.\n\nThe Comics Lounge offers private events and agency managed shows. The Comics Lounge will endeavour to provide access for Members to as many shows as possible, however they cannot guarantee availability for all shows due to private events and agency managed shows.]]></string>
+    <string name="membership_renewal">Membership Renewal</string>
+    <string name="term_des_7">Registered Gold Pass members agree under these Terms that Gold Pass Memberships will be contacted by The Comics Lounge to renew their Membership. The Comics Lounge may offer existing members the opportunity to automatically renew their Memberships as part of these Terms and Conditions, any Members agreeing to have their Memberships automatically renewed will agree to have these terms remain in place unless they “opt out” by emailing The Comics Lounge at <![CDATA[<font color=#004990><u>memberships@thecomicslounge.com.au</u></font>]]> with their Full Name, Email Address used for their Membership and request to cancel their Membership, Gold Pass Members may cancel their membership at any time by emailing to Comic’s Lounge at <![CDATA[<font color=#004990><u>memberships@thecomicslounge.com.au</u></font>]]> or in writing to The Comics Lounge at address: <![CDATA[<font color=#004990><u>26 Errol Street North Melbourne, Victoria 3051.</u></font>]]></string>
+    <string name="refund_policy">Refund Policy</string>
+    <string name="ticket_purchases">Ticket Purchases</string>
+    <string name="term_des_8">Tickets that are cancelled within 5 days of the show start time are not refundable. If the Ticket Purchaser contacts The Comics Lounge within 5 days of the show start time to cancel their ticket, they maybe offered a “CREDIT” for another available show of the same value.\n\nTickets cancelled prior to the 5 day period of the show start time may receive a FULL REFUND, or a CREDIT for another available show of the same value. Booking Fees will not be refunded as part of any refund for tickets.</string>
+    <string name="gold_pass_memberships">Gold Pass Memberships</string>
+    <string name="term_des_9">The Comics Lounge Gold Pass Memberships is a 12-month subscription which offers members the option to attend The Comics Lounge over a 12-month period. The Comics Lounge offers has a “NO REFUND” policy for Gold Pass holders, Gold Pass members will be offered an extension on their membership should the venue be forced to close for any reason.</string>
+    <string name="permitted_use">Permitted Use</string>
+    <string name="term_des_10"><![CDATA[You agree that you are only authorized to visit, view and to retain a copy of pages of Our Sites or your own personal use, and that you shall not duplicate, download, publish, modify or otherwise distribute the material on Our Sites for any purpose other than to review event and promotional information, for personal use, or to purchase tickets or merchandise, unless otherwise specifically authorized by The Comic’s Lounge  to do so. You also agree not to deep link to the site for any purpose, unless specifically authorised by The Comic’s Lounge to do so. The content and software on Our Sites are the property of The Comic’s Lounge and/or its suppliers and is protected by Australian and international copyright laws. We post a legal notice and various credits on pages of Our Sites which may not be removed. Please do not remove this notice or these credits, or any additional information contained along with the notices and credits.]]></string>
+    <string name="term_des_11">You agree to not use the Services to: upload, post, publish, email, reproduce, distribute or otherwise transmit any information, data, text, music, sound, photographs, graphics, video, messages or other materials that are unlawful, harmful, threatening, embarrassing, abusive, harassing, tortious, defamatory, vulgar, obscene, libellous, deceptive, fraudulent, contain explicit or graphic descriptions or accounts of sexual acts, invasive of another\'s privacy, or hateful; \"stalk\" another; upload, post, publish, email, reproduce, distribute or otherwise transmit any content that victimizes, harasses, degrades, or intimidates an individual or group of individuals on the basis of religion, gender, sexual orientation, race, ethnicity, age, or disability; harm minors in any way; impersonate any person or entity, including, but not limited to, the Company officer or other employee, or falsely state or otherwise misrepresent your affiliation with a person or entity; forge headers or otherwise manipulate identifiers in order to disguise the origin of any content transmitted to or through our Service; upload, post, publish, email, reproduce, distribute or otherwise transmit any unsolicited or unauthorized advertising, promotional materials, \"junk mail,\" \"Spam,\" \"chain letters,\" \"pyramid schemes,\" or any other form of solicitation; upload, post, publish, email, reproduce, distribute or otherwise transmit any material that contains software viruses, Trojan horses, worms, time bombs, cancelbots, or any other computer code, files or programs designed to interrupt, destroy, or limit the functionality of any computer software or hardware or telecommunications equipment or any other similarly destructive activity, or surreptitiously intercept or expropriate any system, data or personal information; act in a manner that negatively affects other users\' ability to use Our Site/Services; interfere with or disrupt Our Sites/Services or servers or networks connected to our Service, or disobey any requirements, procedures, policies or regulations of networks connected to our Service; or intentionally or unintentionally violate any applicable local, state, national or international law.\n\nYou also agree that you will not harvest, collect, or store information about our users, or the content posted by on ourSites/Service or use such information for any purpose inconsistent with the purpose of Our Sites or for the purpose of transmitting or facilitating transmission of unsolicited bulk electronic mail or communications.</string>
+    <string name="use_restrictions">Use Restrictions</string>
+    <string name="copyright_and_trademarks">Copyright and Trademarks</string>
+    <string name="term_des_12">You may use Our Sites and the information contained within it for your own personal and non-commercial reference only. You agree that you will not hack into Our Sites nor employ any robot, spider or other device or process to use Our Sites for any unauthorised purposes. You agree that you will not take any action that imposes an unreasonably large burden on Our Sites.\n\nThe information contained within Our Sites (including programming scripts, graphics, and logos) are copyright of The Comic’s Lounge and its related bodies corporate. You may make any copies of any information reasonably incidental to your viewing of Our Sites and may retain a single permanent copy for your personal reference. The information may not otherwise be used, copied, reproduced, published, stored in a retrieval system, altered, transmitted in any form or by any means in whole or in part (except where by law such use cannot be prohibited) without the prior written approval of The Comic’s Lounge or its related bodies corporate.\n\nWe will terminate the privileges of any user who uses Our Sites to unlawfully transmit copyrighted material without a license express consent, valid defence, or fair use exemption to do so. Users who submit User Content to Our Sites, whether articles, images, stories, software, or other copyrightable material must ensure that the User Content they upload does not infringe the copyrights or other rights of third parties (including, but not limited, to trademark, trade secret, privacy, or publicity rights). After proper notification by the copyright holder or its agent to us, and confirmation through court order or admission by the user that they have used Our Sites as an instrument of unlawful infringement, we will terminate the infringing users\' rights to use and/or access to Our Sites. We may, also in our sole discretion, decide to terminate a user\'s rights to use or access Our Sites prior to that time if we believe that an alleged infringement has occurred.\n\nThe trademarks appearing on this Site are primarily trademarks of The Comic’s Lounge. Other trademarks displayed on Our Sites are trademarks of their respective owners. Nothing contained on Our Sites should be construed as granting any licence or right of use of any trademark displayed on Our Sites without the express written permission of The Comic’s Lounge or the relevant affiliate, or third-party owner.\n\nIf you believe that your work has been copied in a way that constitutes copyright infringement, please forward the following information to the copyright agent named below:\nYour username, address, telephone number, and e-mail address.\nA description of the copyrighted work that you claim has been infringed.\nA description of where the alleged infringing material is located.\nA statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law.\nAn electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest; and\nA statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner\'s behalf.\nYou acknowledge and agree that The Comic’s Lounge may preserve content and may also disclose content if required to do so by law or in the good faith belief that such preservation or disclosure is reasonably necessary to: (a) comply with legal process; (b) enforce this Terms and Conditions; © respond to claims that any content violates the rights of third-parties; or (d) protect the rights, property, or personal safety of The Comic’s Lounge, its users or the public.</string>
+    <string name="term_des_13">If you violate these Terms and Conditions, without limiting any other remedies available, The Comic’s Lounge may without notice to you: cancel your tickets and ticket orders without a refund.\nprohibit you from using Our Sites.\nRestrict your ability to make future ticket purchases through The Comic’s Lounge; andif required by law, or by subpoena or an enforcement body, disclose information about you and your use of Our Sites for the investigation of any unlawful or harmful activity.</string>
+    <string name="violation">Violation</string>
+    <string name="third_party_links">Third Party Links</string>
+    <string name="term_des_14">Where Our Sites containlinks to other websites and resources provided by third parties, these links are provided for your information only. Such links should not be interpreted as approval by us of those linked websites or information you may obtain from them. We have no control over the contents of those sites or resources. The Comic’s Lounge does not endorse the content of any third-party site, nor do we warrant that they will not contain viruses or otherwise impact your computer. By using a link to another site, you agree and understand that you may not make any claim against The Comic’s Lounge for any damages or losses, whatsoever, resulting from your use of Our Sites to link to another site. If you have a problem with a link from Our Sites, please notify us at <![CDATA[<font color=#004990><u>customerservice@thecomicslounge.com.au</u></font>]]> and we will investigate your claim and take any actions we deem appropriate in our sole discretion.</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="term_des_15">THE COMIC’S LOUNGE  DOES NOT PROMISE THAT OUR SITES WILL BE ERROR-FREE, UNINTERRUPTED, OR THAT IT WILL PROVIDE SPECIFIC RESULTS FROM USE OF OUR SITES OR ANY CONTENT, SEARCH OR LINK ON IT. THE SITE AND ITS CONTENT ARE DELIVERED ON AN "AS-IS" AND "AS-AVAILABLE" BASIS. THE COMIC’S LOUNGE CANNOT ENSURE THAT FILES YOU DOWNLOAD FROM OUR SITES WILL BE FREE OF VIRUSES OR CONTAMINATION OR DESTRUCTIVE FEATURES. THE COMIC’S LOUNGE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ALSO ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE COMIC’S LOUNGE WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING FROM THE USE OF OUR SITES, INCLUDING WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, AND PUNITIVE AND CONSEQUENTIAL DAMAGES. THE COMIC’S LOUNGE MAKES NO GUARANTEE OF ANY SPECIFIC RESULT FROM USE OF OUR SITES OR USE OF THE COMIC’S LOUNGE SERVICE. THE COMIC’S LOUNGE DISCLAIMS ANY AND ALL LIABILITY FOR THE ACTS, OMISSIONS AND CONDUCT OF ANY THIRD-PARTY USERS, THE COMIC’S LOUNGE USERS, ADVERTISERS AND/OR SPONSORS ON , IN CONNECTION WITH COMIC’S LOUNGE SERVICE OR OTHERWISE RELATED TO YOUR USE OF OUR SITES AND/OR THE COMIC’S LOUNGE SERVICE.\nWithout limiting the foregoing, you may report the misconduct of users and/or third-party advertisers, service and/or product providers referenced on or included in Our Sites to The Comic’s Lounge  at <![CDATA[<font color=#004990><u>customerservice@thecomicslounge.com.au</u></font>]]>.The Comic’s Lounge may investigate the claim and take appropriate action, in its sole discretion.</string>
+    <string name="limitation_on_liability">Limitation on Liability</string>
+    <string name="term_des_16">IN NO EVENT WILL THE COMIC’S LOUNGE BE LIABLE TO YOU FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES,OR FOR LOST PROFITS, REVENUES OR BUSINESS OPPORTUNITIES, EVEN IF THE COMIC’S LOUNGE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</string>
+    <string name="indemnity">Indemnity</string>
+    <string name="term_des_17"><![CDATA[You agree to indemnify and hold The Comic’s Lounge  and its affiliates, and each of The Comic’s Lounge’s and its affiliates’ respective officers, agents, employees, contractors and principals, harmless from any loss, liability, claim or demand, including reasonable attorneys\' fees, made by any third party due to or arising out of your use of Our Sites, including also your use of Our Sites to provide a link to another site or to upload content or other information to Our Sites.]]></string>
+    <string name="governing_law_and_disputes">Governing Law and Disputes</string>
+    <string name="term_des_18"><![CDATA[These Terms and Conditions shall be governed by the laws of Victoria, Australia applicable to agreements made and to be performed therein without regard to conflict of laws principles.  You expressly agree that exclusive jurisdiction for any claim or dispute with The Comic’s Lounge or relating in any way to your use of our Service resides in the courts of Australia, in the state of Victoria, or any state court located in Australia, and waive any right to resort to any form of class action.]]></string>
+    <string name="termination">Termination</string>
+    <string name="term_des_19">These Terms and Conditions are effective until terminated by The Comic’s Lounge, and the Company may terminate your agreement and your access to the Site at any time without notice. In the event of termination, you are no longer authorized to access Our Sites, but all restrictions imposed on you, licenses granted by you and all disclaimers and limitations of liability set out in these Terms and Conditions will survive.</string>
+    <string name="severability">Severability</string>
+    <string name="term_des_20">If any provision of these Terms and Conditions is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</string>
+    <string name="general">General</string>
+    <string name="term_des_21">These Terms and Conditions, together with our Privacy Policy and any other notices or policies we have published on Our Sites and additional terms for specific features or areas, as applicable, constitute the entire agreement between you and us regarding this Site and our Services.\nWe rely on your continued observance of these Terms and Conditions. If the Company suffers any loss or damage or incurs any costs in connection with any breach of these Terms and Conditions or any other legal obligation then you agree to indemnify the Company for those losses, damages, and costs.\nYou and we shall be independent parties under these Terms and Conditions, and nothing herein will constitute either party as the employer, employee, agent, or representative of the other party, or both parties as joint ventures and partners for any purpose.You shall not transfer, assign, sublicense nor pledge in any manner whatsoever, any of your rights or obligations under this Terms and Conditions.\nWe may transfer, assign, sublicense, or pledge in any manner whatsoever, any of its rights and obligations under this Terms and Conditions to a subsidiary, affiliate, or successor thereof or to any third party whatsoever, without notifying you or receiving your consent.</string>
+    <string name="entry_submitted_good_luck">Entry Submitted, Good Luck!</string>
+    <string name="no_confirmed_tickets">No Confirmed Tickets</string>
+    <string name="membership_manager_chat_room">Membership Manager Chat Room</string>
+    <string name="if_you_are_unable_to_find_answers_in_our_q_amp_a_section_please_add_your_comments_in_the_box_below_and_our_team_will_get_back_within_24_hours"><![CDATA[If you are unable to find answers in our Q&A section, please add your comments in the box below and our team will get back within 24 hours.]]></string>
+    <string name="type_your_comments_here">Type your comments here...</string>
+    <string name="the_comic_s_lounge_is_a_great_place_to_host_your_corporate_function_or_private_event_with_the_very_best_in_local_and_international_comedians_excellent_catering_options_and_seating_capacity_of_over_400_guests_the_comic_s_lounge_can_meet_any_demands_that_will_make_your_event_a_success">The Comic\'s Lounge is a great place to host your corporate function or private event, with the very best in local and international comedians, excellent catering options and seating capacity of over 400 guests, The Comic\'s Lounge can meet any demands that will make your event a success.</string>
+    <string name="please_let_us_know_more_about_your_interest">Please let us know more about your interest.</string>
+    <string name="corporate">Corporate</string>
+    <string name="private1">Private</string>
+    <string name="date_if_known">Date (If known)</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="number_of_guests">Number of guests</string>
+    <string name="catering_no_catering">Catering / No catering</string>
+    <string name="contact_person">Contact person</string>
+    <string name="contact_number">Contact number</string>
+    <string name="dear_member_in_this_area_of_the_app_you_can_receive_notifications_and_messages_directly_from_your_membership_manager_you_can_discuss_bookings_events_and_special_offers_to_ensure_you_have_a_great_experience_at_the_comics_lounge">Dear Member, in this area of the app, you can receive notifications and messages directly from your Membership Manager. You can discuss bookings, events and special offers to ensure you have a great experience at The Comics Lounge.</string>
+    <string name="membership_details">Membership details</string>
+    <string name="thank_you_for_your_enquiry_you_or_the_nominated_person_will_be_contacted_within_48_hours">Thank you for your enquiry, you or the nominated person will be contacted within 48 hours.</string>
+    <string name="if_you_can_access_the_membership_concierge_area_of_the_app_it_means_your_gold_pass_membership_has_been_activated_and_you_can_start_enjoying_the_free_passes_for_many_events">If you can access the Membership Concierge area of the app, it means your Gold Pass membership has been activated and you can start enjoying the free passes for many events.</string>
+    <string name="under_the_my_account_tab_you_will_see_your_name_contact_details_and_the_number_of_days_remaining_on_your_membership">Under the “My Account” tab, you will see your Name, Contact Details and the number of days remaining on your membership.</string>
+    <string name="help_by_video_qa">There is also a <annotation action="video"><b><u>Video</u></b></annotation> and <annotation action="qa"><b><u>Q&amp;A</u></b></annotation> to help answer any questions.</string>
+    <string name="please_select_type">Please select type</string>
+    <string name="please_select_number_of_guests">Please choose number</string>
+    <string name="please_select_number_of_catering">Please choose your option</string>
+    <string name="please_enter_contact_person">Please enter Contact person</string>
+    <string name="please_enter_contact_number">Please enter Contact number</string>
+    <string name="please_enter_valid_phone_number">Please enter valid Phone Number</string>
+    <string name="members_notifications">Members Notifications</string>
+    <string name="permission_notifications_denied">Permission Notifications denied</string>
+    <string name="default_notification_channel_id">comicslounge_chanel</string>
+    <string name="notifications">Notifications</string>
+    <string name="chat_with_my_personal_membership_manager">Chat with my personal Membership Manager</string>
+    <string name="term_des_22">This Privacy Policy applies to the services offered by The Comic’s Lounge (ABN: 41 932 413 614). The following Privacy Policy explains our practices in relation to information you provide to us. The Comic’s Lounge’s privacy policy is based on the National Privacy Principles in the Privacy Act 1988 and subsequent Privacy Amendment Act 2001 and on company policies to protect personal information. Further information on your rights can be found on The Australian Privacy Commissioners website at www.privacy.gov.au .</string>
+    <string name="collection_of_your_information">Collection of Your Information</string>
+    <string name="term_des_23">The Comic’s Lounge collects personal information about you when completing transactions from www.thecomicslounge.com.au website, mobile website, and The Comics Lounge Mobile App.</string>
+    <string name="use_and_disclosure_of_your_information">Use and Disclosure of Your Information</string>
+    <string name="term_des_24">The personal information collected by The Comic’s Lounge is used to ensure that the tickets or goods you purchased are delivered to you and that you are advised of any possible changes/cancellations that may occur in relation to the event you booked. The Comic’s Lounge collect personal financial information to confirm the identity of users and bill customers for products and services. Unique identifiers (such as membership or credit card numbers) are collected from you to verify your identity and for use as account numbers in our record system. We will not share financial or unique identifier information with third parties without your prior consent. When you make a purchase through the Comic’s Lounge system your consent is required to provide your financial or contact information to those third parties necessary to process your transactions with us, such as credit card. You will be asked at the time of booking if you would like to receive this information. The Comic’s Lounge will not use or disclose this information in any way, other than that disclosed in this policy. Changing and accessing the Information we have about you The Comic’s Lounge uses its best endeavours to ensure that the information it obtains is accurate, complete, and up to date. You may access or change information that The Comic’s Lounge has collected about you by placing your request in writing and sending your request to us. The Comic’s Lounge can be contacted at: email : contact@thecomicslounge.com.au or via mail: The Comic’s Lounge Privacy Officer 26 Errol Street North Melbourne, Victoria 3051 Please allow 14 days for your request to be processed</string>
+    <string name="data_security">Data Security</string>
+    <string name="term_des_25">The Comic’s Lounge will endeavour to take all reasonable steps to keep secure any information that we hold about you. The Comic’s Lounge has security measures in place to protect the loss, misuse, and alteration of the information under our control. Our secure server software is the industry standard and among the best software available today for secure commerce transactions. It encrypts all your personal information, including credit card number, name, and address, so that it cannot be read by third parties. Please note also that The Comic’s Lounge may use the overseas facilities of The Comic’s Lounge to process or back up its information. As a result, we transfer and store your personal information to our overseas facilities. The Comic’s Lounge Corporation abides by The Comic’s Lounge privacy policy and the National Privacy Principles. This information will not be used or released to any third-party companies.</string>
+    <string name="our_use_of_specific_technologies">Our use of specific technologies</string>
+    <string name="term_des_26">Our site uses cookies to keep track of what you have purchased. Cookies are pieces of information that a web site transfers to your computer\'s hard disk for record keeping purposes. Most web browsers are set to accept cookies. We also use cookies to deliver content specific to your interests; to save your password so you do not have to re-enter it each time you visit our Site, and for other purposes relating to your transactions on the Site. Cookies also help us estimate our number of users and determine overall traffic patterns through our web site. If you do not wish to receive any cookies, you may set your browser to refuse cookies. However, this may mean you will not be able to order tickets or take full advantage of The Comic’s Lounge\'s services. We may also use other technologies such as web bugs to help us collect information about your usage of our web site. Any information we collect is subject to our Privacy Policy.</string>
+    <string name="the_comic_s_lounge_and_links_to_other_web_sites">The Comic’s Lounge and links to other web sites</string>
+    <string name="term_des_27">The Comic’s Lounge provides links to web sites outside of The Comic’s Lounge service. These linked sites are not under the control of The Comic’s Lounge, and we are not responsible for the privacy practices or content of companies linked to our web site. Before disclosing your personal information on any other web site, we advise you to examine the privacy policies of those web sites.</string>
+    <string name="access_and_correction">Access and correction</string>
+    <string name="term_des_28">Under the Privacy Act, you have a right to seek access to information, which The Comic’s Lounge holds about you. You also have the right to ask us to correct information about you, which is inaccurate, incomplete, or out of date. If you are an online customer, you can access or correct the personal information by logging onto our website (www.thecomicslounge.com.au ).</string>
+    <string name="online_privacy_issues">Online privacy issues</string>
+    <string name="term_des_29">To the extent that this Privacy Policy applies to online privacy issues, it is to be read as forming part of the terms of use for our website and mobile site. When you deal with The Comic’s Lounge, whether online or otherwise, The Comic’s Lounge takes its privacy obligations seriously. This paragraph is intended to provide more information about privacy for the users of our website and mobile site. Generally, The Comic’s Lounge will handle personal information collected online consistently with the way that it handles personal information collected offline. To summarise, we will use personal information collected online to provide you with our products and services (e.g., to process your online purchases), to contact you in the case of an event cancellation or a change of venue, and if you agree, for marketing purposes. If you have opted in to receive newsletters or special offers from The Comic’s Lounge, you can choose to unsubscribe from these programs at any time via our website. Other matters specific to The Comic’s Lounge\'s handling of personal information online are set out below. For each visitor to our website and mobile site, our server automatically recognises and stores the visitor\'s domain name. In addition, our website and mobile site use cookies. To enhance your experience when using our website or mobile site, the cookies may automatically collect information from you such as: postcode, preferences, region, and login username. If you use the ‘Remember Me’ feature during the The Comic’s Lounge ‘login’ process, the cookies will also store your login details. Most web browsers are set by default to accept cookies. However, if you do not wish to receive any cookies you may set your browser to either prompt or refuse cookies. Please note that rejecting cookies will disable your browser from purchasing tickets from our website or mobile site. We also use cookies for tracking the statistics of our website. This allows us to better understand our users and improve the layout and functionality of our website. This tracking is conducted in such a way to ensure the anonymity of visitors. If you consent to receiving The Comic’s Lounge special offers, The Comic’s Lounge may use your personal information to provide special offers from third parties with The Comic’s Lounge benefits (e.g., The Comic’s Lounge reward points). In these circumstances, The Comic’s Lounge may provide your data to a third party for the purpose of better understanding your needs and interests. Where special offers are sent to you, they will be sent by The Comic’s Lounge and may be co-branded with the third party. You may opt out from receiving The Comic’s Lounge special offers at any time by logging onto The Comic’s Lounge website and updating your personal details. Secure Online Transactions. When you make a purchase through our website or mobile site, we process your credit card details securely www.thcomicslounge.com.au\'s SSL encryption at our website and a secure browser at your end, we take all measures to ensure that your credit card and anonymity are protected when you purchase online. Links to other websites. Sometimes our website contains links to third party websites, for your convenience and information. When you access a non-The Comic’s Lounge website, please understand that The Comic’s Lounge is not responsible for the privacy practices of that site. We suggest that you review the privacy policies of each site you visit.</string>
+    <string name="future_changes">Future changes</string>
+    <string name="term_des_30">The Comic’s Lounge undergoes constant development as we introduce new services and features to our web site. From time to time, because of this, our policies will be reviewed and may be revised. The Comic’s Lounge reserves the right to change its privacy policy at any time and notify you by posting an updated version of the policy on its web site. Your continued use of the web site indicates that you accept the policy in place at that time. Please note that in the event of a merger, acquisition, bankruptcy, or similar corporate reorganisation we may transfer personal information to another corporate entity. If this occurs, your personal information will in every other respect remain under the same privacy policy.</string>
+    <string name="updated_on_the_8th_of_december_2024">Updated on the 8th of December 2024</string>
+    <string name="downloading">Downloading...</string>
+    <string name="are_you_sure_you_want_to_delete_your_account">Are you sure you want to delete your account?</string>
+    <string name="enter_your_redemption_code_here">Enter your Redemption Code here</string>
+    <string name="e_g_s2345t">E.G.S2345T</string>
+    <string name="redeem_activation_code">Redeem Activation Code</string>
+    <string name="buy">Buy</string>
+    <string name="no_events">No Events</string>
+    <string name="no_saved_events">No Saved Events</string>
+    <string name="saved_to_the_gallery">" Saved to the Gallery"</string>
+    <string name="here_are_no_offers_for_you_yet">Here are no offers for you yet</string>
+    <string name="my_membership_ntutorial_video">My Membership tutorial video</string>
+    <string name="everything_you_need_to_know">(Everything you need to know)</string>
+    <string name="use_my_printed_tickets">Use my printed tickets</string>
+    <string name="please_read">Please read</string>
+    <string name="read_des">I/WE agree to present our Physical Printed Tickets for this event at the door or be required to pay Full-Price for entry.</string>
+    <string name="i_we_agree">I/We Agree</string>
+    <string name="printed_paper_tickets_available_for_this_show">Printed Paper Tickets available for this show</string>
+    <string name="maximum_of_10_printed_tickets_per_show">(maximum of 10 printed tickets per show)</string>
+    <string name="discount_gold_pass">Discount gold pass:</string>
+    <string name="discount_printed_tickets">Discount Printed tickets:</string>
+    <string-array name="month_array">
+        <item>Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="year_array">
+        <item>Year</item>
+        <item>2029</item>
+        <item>2028</item>
+        <item>2027</item>
+        <item>2026</item>
+        <item>2025</item>
+        <item>2024</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+    </string-array>
+    <string-array name="guest_number">
+        <item>Choose number</item>
+        <item>1 to 20</item>
+        <item>20 to 50</item>
+        <item>50 to 100</item>
+        <item>100 to more</item>
+    </string-array>
+    <string-array name="cate_arr">
+        <item>Choose your option</item>
+        <item>Catering</item>
+        <item>No catering</item>
+    </string-array>
+</resources>

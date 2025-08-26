@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/buy_tickets_str"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/close_sheet_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="24dp"
+                    app:tint="@color/bg_splash"
+                    android:src="@mipmap/ic_circle_close" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_date"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_semibold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/date_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="9dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey_5"/>
+
+
+                <LinearLayout
+                    android:id="@+id/bottom_time_view_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/select_time_str"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/time_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey_5"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_event_time_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_event_time_display"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/loading_str"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@color/contact_us_edt_back_color" />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ticket_type"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_semibold" />
+
+                <RelativeLayout
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_only"
+                            android:textAllCaps="true"
+                            android:textColor="@color/bg_splash"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/minus_show_only"
+                                android:src="@mipmap/ic_minus"
+                                android:layout_width="12dp"
+                                android:layout_height="21dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="2dp"
+                                android:id="@+id/plus_show_only_txt"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLength="4"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:fontFamily="@font/poppins_regular" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/plus_show_only"
+                                android:src="@mipmap/ic_plus"
+                                android:layout_width="14dp"
+                                android:layout_height="21dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_with_meal_str"
+                            android:textAllCaps="true"
+                            android:textColor="@color/bg_splash"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                        <LinearLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/minus_meal_txt"
+                                android:src="@mipmap/ic_minus"
+                                android:layout_width="12dp"
+                                android:layout_height="21dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="2dp"
+                                android:id="@+id/plus_meal_txt"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLength="4"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="0"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:fontFamily="@font/poppins_regular"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/plus_meal_only"
+                                android:src="@mipmap/ic_plus"
+                                android:layout_width="14dp"
+                                android:layout_height="21dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/contact_us_edt_back_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/show_only_caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_only1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_show_only_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="$0.00"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/show_with_meal_caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_with_meal"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/show_with_meal_total_price"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="$0.00"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/grand_total"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="$0.00"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/tvTicketInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/gold_pass_ticket"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/colorPrimary"
+                        android:visibility="gone" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_print_tick">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/printed_paper_tickets_available_for_this_show"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/colorPrimary" />
+                        <TextView
+                            android:textSize="13dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/gray_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/maximum_of_10_printed_tickets_per_show"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/check_out_tick"
+                    style="@style/CalenderButton"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/checkout_str" />
+
+            </LinearLayout>
+        </LinearLayout>
+</androidx.core.widget.NestedScrollView>
