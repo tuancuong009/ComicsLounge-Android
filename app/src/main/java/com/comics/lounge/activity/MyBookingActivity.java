@@ -88,6 +88,7 @@ import static com.comics.lounge.conf.Constant.BOOKING_CONFIRM;
 import static com.comics.lounge.conf.Constant.FREE_TICKETS;
 import static com.comics.lounge.conf.Constant.FREE_TRANSACTION;
 import static com.comics.lounge.conf.Constant.PAID_TICKETS;
+import static com.comics.lounge.conf.Constant.PRINT_TICKETS;
 import static com.comics.lounge.conf.Constant.REQUEST_PAY_WITH_PAYPAL;
 
 import kotlin.Unit;
@@ -280,19 +281,13 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
         } else {
             dateOrTime.setText(AppUtil.fmNewDate2(eventDateselect) + " - " + day + " " + eventOpenTime);
         }
-        AppUtil.disableBt(checkOutBtn);
-
 
         freeTicketCheck.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                //walletDisabled(true);
-                // walletDisabled(false);
                 if (bookTicketPojo.getTotalCounter() >= 2) {
                     isFreeTicket = true;
                     totalPrice = NumberUtils.parseMoney(bookTicketPojo.getShowOnlyPrice()) *
                             bookTicketPojo.getFreeTicket() * 2;
-                    /*totalPrice = NumberUtils.parseMoney(bookTicketPojo.getShowOnlyPrice()) *
-                            bookTicketPojo.getFreeTicket() * 2;*/
                     discountPriceTxt.setText(NumberUtils.formatMoney(totalPrice));
                 } else {
                     isFreeTicket = true;
@@ -301,8 +296,6 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                     discountPriceTxt.setText(NumberUtils.formatMoney(totalPrice));
                 }
             } else {
-                //walletDisabled(false);
-                //  walletDisabled(false);
                 totalPrice = 00.0;
                 discountPriceTxt.setText(NumberUtils.formatMoney(0));
                 isFreeTicket = false;
@@ -343,14 +336,11 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
             openCountryDialog();
 
         });
-        cbRead.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    AppUtil.enableBt(checkOutBtn);
-                }else {
-                    AppUtil.disableBt(checkOutBtn);
-                }
+        cbRead.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked){
+                AppUtil.enableBt(checkOutBtn);
+            }else {
+                AppUtil.disableBt(checkOutBtn);
             }
         });
 
@@ -381,7 +371,7 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
 
         });
         llPrintTick.setOnClickListener(v -> showPopup());
-        cvPrintTick.setOnClickListener(v -> showPopup());
+        tvPrintTick.setOnClickListener(v -> showPopup());
 
         return view;
     }
@@ -430,10 +420,10 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                     selectedNumber = -1;
                     llRead.setVisibility(View.GONE);
                     cvPrintTick.setVisibility(View.GONE);
+                    AppUtil.enableBt(checkOutBtn);
                 }else {
                     selectedNumber = number;
 
-                    // Uncheck all other checkboxes
                     for (CheckBox cb : checkBoxList) {
                         if (cb != view) {
                             cb.setChecked(false);
@@ -448,6 +438,11 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                         tvPrintTick.setText(selectedNumber + " tickets");
                     }
                     llRead.setVisibility(View.VISIBLE);
+                    if (!cbRead.isChecked()){
+                        AppUtil.disableBt(checkOutBtn);
+                    }else {
+                        AppUtil.enableBt(checkOutBtn);
+                    }
                 }
                 popupWindow.dismiss();
             });
@@ -587,7 +582,9 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
     public void addedNotchPaypal(String paymentNonce) {
         JsonArray freeJsonArray = new JsonArray();
         JsonArray paidJsonArray = new JsonArray();
+        JsonArray printJsonArray = new JsonArray();
         JsonArray jsonTickets = new JsonArray();
+        JsonObject jsPrint = new JsonObject();
 
         int freeTicket = bookTicketPojo.getFreeTicket() * 2;
         for (int j = 0; j < bookTicketPojo.getTotalCounter(); j++) {
@@ -628,6 +625,7 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                 }
             }
             jsonObj.add("attribute", jsonObjectAttb);
+
             if (eventTimePOS != -1) {
                 if (eventTimePOS == 0) {
                     bookTicketPojo.getEventPriceDatesArrayList().get(j).getAttributeFirstJson();
@@ -645,6 +643,14 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                 jsonObj.addProperty("ticket_type", "paid");
                 paidJsonArray.add(jsonObj);
             }
+            if (j == 0 && selectedNumber > 0){
+                jsPrint.addProperty("product_id", bookTicketPojo.getEventDetailId() + "");
+                jsPrint.addProperty("qty", selectedNumber);
+                jsPrint.addProperty("custom_price", NumberUtils.parseMoney(bookTicketPojo.getEventPriceDatesArrayList().get(j).getPrice()).toString());
+                jsPrint.add("attribute", jsonObjectAttb);
+                jsPrint.addProperty("ticket_type", "printed");
+                printJsonArray.add(jsPrint);
+            }
         }
 
         finalOrdersServiceManager = new FinalOrdersServiceManager(this, activity);
@@ -652,17 +658,18 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
         try {
             JsonObject jsonObjectFree = new JsonObject();
             jsonObjectFree.add(FREE_TICKETS, freeJsonArray);
-
             JsonObject jsonObjectPaid = new JsonObject();
             jsonObjectPaid.add(PAID_TICKETS, paidJsonArray);
+            JsonObject jsObjPrint = new JsonObject();
+            jsObjPrint.add(PRINT_TICKETS, printJsonArray);
             jsonTickets.add(jsonObjectFree);
             jsonTickets.add(jsonObjectPaid);
+            jsonTickets.add(jsObjPrint);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         JsonObject loginObj = new JsonObject();
-        String walletBal = bookTicketPojo.getWalletBalance() != null && bookTicketPojo.getWalletBalance().equals("") ? bookTicketPojo.getWalletBalance() : "";
         try {
             loginObj.addProperty("user_id", userID);
             loginObj.addProperty("virtuemart_state_id", stateId);
@@ -695,55 +702,59 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
 
     @Override
     public void serviceEnd(String msg, String serviceName) {
-        if (serviceName.equals(GetPaypalTokenService.SERVICE_NAME)) {
-            new Handler().postDelayed(() -> displayViewSwitcher(viewSwitcherLayout, 0), 4000);
-            if (getPaypalTokenServiceManager.getPaypalToken() != null && !getPaypalTokenServiceManager.getPaypalToken().equals("")) {
-                Log.e("TAG", "serviceEnd: call paypal" );
-                callingBraintreePaypal(getPaypalTokenServiceManager.getPaypalToken());
-            }
-        } else if (serviceName.equals(FinalOrdersService.SERVICE_NAME)) {
-            finalOrdersServiceManager.getResponseMsg();
-            //Log.e("FinalOrdersService: ", finalOrdersServiceManager.getResponseMsg());
-            displayViewSwitcher(viewSwitcherLayout, 1);
-            finalOrdersServiceManager.getServiceStatus();
-            if (finalOrdersServiceManager.getServiceStatus() != null &&
-                    finalOrdersServiceManager.getServiceStatus().toLowerCase().equals("success")) {
-                showPaymentSuccess("Congratulations, your booking is confirmed.");
-            } else if (finalOrdersServiceManager.getServiceStatus() != null &&
-                    finalOrdersServiceManager.getServiceStatus().toLowerCase().equals("error")) {
-                // displaySnackbarMsg("Payment failed try again");
-                String message = finalOrdersServiceManager.getResponseMsg();
-                showPaymentSuccess(message);
-            } else {
-                showPaymentSuccess("Congratulations, your booking is confirmed.");
-            }
-
-        } else if (serviceName.equals(ServerTimeService.SERVICE_NAME)) {
-            Log.e("Server_time :", serverTimeServiceManager.gettingServerTime() + " = " + closeEventTime);
-            if (!serverTimeServiceManager.gettingServerTime().equals("")) {
-                if (serverTimeServiceManager.gettingServerTime() != null && closeEventTime != null && serverTimeServiceManager.gettingServerTime() != "" && closeEventTime != "") {
-                    // TODO: remove server time api and validation
-                    boolean isValid = DatesUtils.validateEventClose(serverTimeServiceManager.gettingServerTime(), closeEventTime);
-                    if (isValid) {
-                        displayViewSwitcher(viewSwitcherLayout, 1);
-                        if (finalPayableAmount == 0) {
-                            //Call Direct Final OrderAPI
-                            addedNotchPaypal("");
-                        } else {
-                            getPaypalTokenServiceManager = new GetPaypalTokenServiceManager(this, activity);
-                            getPaypalTokenServiceManager.prepareWebServiceJob();
-                            getPaypalTokenServiceManager.featchData();
-                            displayViewSwitcher(viewSwitcherLayout, 1);
-                        }
-                    } else {
-                        displaySnackbarMsg(getResources().getString(R.string.pls_select_before_close_date));
-                    }
-                } else {
-                    displaySnackbarMsg(getResources().getString(R.string.someting_wrong));
+        switch (serviceName) {
+            case GetPaypalTokenService.SERVICE_NAME -> {
+                new Handler().postDelayed(() -> displayViewSwitcher(viewSwitcherLayout, 0), 4000);
+                if (getPaypalTokenServiceManager.getPaypalToken() != null && !getPaypalTokenServiceManager.getPaypalToken().equals("")) {
+                    Log.e("TAG", "serviceEnd: call paypal");
+                    callingBraintreePaypal(getPaypalTokenServiceManager.getPaypalToken());
                 }
             }
-        } else if (serviceName.equals(PayPalLogService.SERVICE_NAME)) {
-            Log.e("PayPalLogService: ", payPalLogServiceManager.getResponseMsg());
+            case FinalOrdersService.SERVICE_NAME -> {
+                finalOrdersServiceManager.getResponseMsg();
+                //Log.e("FinalOrdersService: ", finalOrdersServiceManager.getResponseMsg());
+                displayViewSwitcher(viewSwitcherLayout, 1);
+                finalOrdersServiceManager.getServiceStatus();
+                if (finalOrdersServiceManager.getServiceStatus() != null &&
+                        finalOrdersServiceManager.getServiceStatus().toLowerCase().equals("success")) {
+                    showPaymentSuccess("Congratulations, your booking is confirmed.");
+                } else if (finalOrdersServiceManager.getServiceStatus() != null &&
+                        finalOrdersServiceManager.getServiceStatus().toLowerCase().equals("error")) {
+                    // displaySnackbarMsg("Payment failed try again");
+                    String message = finalOrdersServiceManager.getResponseMsg();
+                    showPaymentSuccess(message);
+                } else {
+                    showPaymentSuccess("Congratulations, your booking is confirmed.");
+                }
+            }
+            case ServerTimeService.SERVICE_NAME -> {
+                Log.e("Server_time :", serverTimeServiceManager.gettingServerTime() + " = " + closeEventTime);
+                if (!serverTimeServiceManager.gettingServerTime().equals("")) {
+                    if (serverTimeServiceManager.gettingServerTime() != null && closeEventTime != null && serverTimeServiceManager.gettingServerTime() != "" && closeEventTime != "") {
+                        // TODO: remove server time api and validation
+                        boolean isValid = DatesUtils.validateEventClose(serverTimeServiceManager.gettingServerTime(), closeEventTime);
+                        if (isValid) {
+                            displayViewSwitcher(viewSwitcherLayout, 1);
+                            if (finalPayableAmount == 0) {
+                                //Call Direct Final OrderAPI
+                                addedNotchPaypal("");
+                            } else {
+                                getPaypalTokenServiceManager = new GetPaypalTokenServiceManager(this, activity);
+                                getPaypalTokenServiceManager.prepareWebServiceJob();
+                                getPaypalTokenServiceManager.featchData();
+                                displayViewSwitcher(viewSwitcherLayout, 1);
+                            }
+                        } else {
+                            displaySnackbarMsg(getResources().getString(R.string.pls_select_before_close_date));
+                        }
+                    } else {
+                        displaySnackbarMsg(getResources().getString(R.string.someting_wrong));
+                    }
+                }
+            }
+            case PayPalLogService.SERVICE_NAME ->
+                    Log.e("PayPalLogService: ", payPalLogServiceManager.getResponseMsg());
+
             //TODO: pending
         }
     }

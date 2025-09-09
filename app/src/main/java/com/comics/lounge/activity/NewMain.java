@@ -309,7 +309,6 @@ public class NewMain extends AbstractBaseActivity {
         if (resultCode == REQUEST_PAY_WITH_PAYPAL) {
             boolean success = data.getBooleanExtra(Constant.EXTRA_SUCCESS, false);
             String message = data.getStringExtra(Constant.EXTRA_MESSAGE);
-            Log.e("Payment: success: ", success + " message:" + message);
             if (success) {
                 myBookingActivity.addedNotchPaypal(message);
                 String successMsg = getString(R.string.paypal_success_value);

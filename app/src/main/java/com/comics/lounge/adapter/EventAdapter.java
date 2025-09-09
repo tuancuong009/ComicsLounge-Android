@@ -66,17 +66,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.VH> {
             activity.frmEventDetail.setArguments(bundle);
             activity.addFrmDetail(activity.frmEventDetail);
         });
-//        holder.bind.cbLike.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//            SessionManager sessionManager = new SessionManager(activity);
-//            HashMap<String, Object> map = new HashMap<>();
-//            map.put("user_id", sessionManager.getCurrentlyLoggedUserId());
-//            map.put("event_id", eventNew.getId());
-//            if (isChecked) {
-//                addOrRemove("event/add_fav_event.php", map);
-//            } else {
-//                addOrRemove("event/remove_fav_event.php", map);
-//            }
-//        });
         holder.bind.cbLike.setOnClickListener(v -> {
             SessionManager sessionManager = new SessionManager(activity);
             HashMap<String, Object> map = new HashMap<>();

@@ -3,6 +3,7 @@ package com.comics.lounge.fragments;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -366,15 +367,11 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                 bookTicketPojo.setWithMealPrice("$0");
             }
 
-         /*   bookTicketPojo.setEventTitle(eventDetail.getProductName());
-            bookTicketPojo.setSelectDatestr(DatesUtils.AppDateFormat(dateStr,"dd/MM/yyyy"));
-            bookTicketPojo.setTimeStr(eventTime);*/
             bookTicketPojo.setWithMealQty(withMeal);
             bookTicketPojo.setGrandTotal(grandTotal);
             bookTicketPojo.setTotalCounter(totalCounter);
             bookTicketPojo.setEventPriceDatesArrayList(eventPriceDatesList);
             bookTicketPojo.setWalletBalance(wallet != null ? wallet.balance : "0");
-            //bookTicketPojo.setWalletBalance("50");
             bookTicketPojo.setWalletFreeTicket(wallet != null ? wallet.eventCountLeft : 0);
             bookTicketPojo.setFreeTicket(eventDetail.getFree());
             bookTicketPojo.setShowOnlyTotal(showOnlyTotal.getText().toString().trim());
@@ -412,8 +409,6 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                 });
         builder.show();
         builder.setCancelable(false);
-
-
     }
 
     private void switchTONoInternetActivity() {
@@ -423,16 +418,6 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
 
     public void openBottomSheetMenu() {
         bottomSheet.setVisibility(View.VISIBLE);
-    }
-
-    public void switchToFullScreenImageViewFragment(String imageUrl) {
-        if (GlobalConf.checkInternetConnection(activity)) {
-            Intent intent = new Intent(activity, FullScreenImageViewActivity.class);
-            intent.putExtra("imageURL", imageUrl);
-            startActivity(intent);
-        } else {
-            switchTONoInternetActivity();
-        }
     }
 
     private void callingWaletAPI() {
@@ -489,14 +474,14 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                         .error(R.mipmap.ic_launcher_foreground)
                         .into(backgroundImage);
                 if (eventDetail.sessionsAllowed.toLowerCase().equals("yes")) {
-                    String sessions = "";
+                    StringBuilder sessions = new StringBuilder();
                     for (int i = 0; i < eventDetail.getSessionList().size(); i++) {
-                        sessions += eventDetail.getSessionList().get(i) + "\n";
+                        sessions.append(eventDetail.getSessionList().get(i)).append("\n");
                     }
-                    showTimeTxt.setText(sessions);
+                    showTimeTxt.setText(sessions.toString());
 
 
-                    if (eventDetail.getOpenList().size() > 0) {
+                    if (!eventDetail.getOpenList().isEmpty()) {
                         String openTime = "";
                         for (int i = 0; i < eventDetail.getOpenList().size(); i++) {
                             openTime += eventDetail.getOpenList().get(i) + "\n";
@@ -507,7 +492,7 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                     }
 
 
-                    if (eventDetail.getDinnerList().size() > 0) {
+                    if (!eventDetail.getDinnerList().isEmpty()) {
                         StringBuilder dinnerTime = new StringBuilder();
                         for (int i = 0; i < eventDetail.getDinnerList().size(); i++) {
                             dinnerTime.append(eventDetail.getDinnerList().get(i)).append("\n");
@@ -543,7 +528,7 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                 } else {
                     bottomTimeViewLayout.setVisibility(View.GONE);
                 }
-
+                Log.e("TAG", "serviceEnd: "+eventDetail.isMemberAccess() );
                 if (eventDetail.isMemberAccess()) {
                     tvTicketInfo.setVisibility(View.VISIBLE);
                 } else {
@@ -552,14 +537,10 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                 mainLayout.setVisibility(View.VISIBLE);
             }
         } else if (serviceName.equals(WalletService.SERVICE_NAME)) {
-            //  Log.e("Event_status :",walletServiceManager.getServiceStatus());
             if (walletServiceManager.getServiceStatus() != null) {
                 if (walletServiceManager.getServiceStatus().toLowerCase().equals("success")) {
                     wallet = walletServiceManager.getWalletData();
                     sessionManager.storeFreeTicketCount(wallet.eventCountLeft);
-//                    sessionManager.freeEventRestored(wallet.freeEventRestored,
-//                            wallet.eventCountAllowed,
-//                            wallet.freeEventRestored);
                     sessionManager.freeEventRestored(wallet.freeEventRestored,
                             wallet.eventCountAllowed,
                             String.valueOf(wallet.eventCountLeft));
@@ -615,9 +596,5 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
         eventTimePos = position;
         llTimeSelectLable.setVisibility(View.VISIBLE);
         timeSelectValue.setText("OPEN TIME : " + eventTime + " DINNER TIME : " + eventDetail.getDinnerList().get(eventTimePos));
-    }
-
-    public void showingLoaderView(int index) {
-        vsEventdetail.setDisplayedChild(index);
     }
 }

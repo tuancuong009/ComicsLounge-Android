@@ -109,6 +109,8 @@ public class EventDetailsService extends CoreWebService implements Runnable {
             }
 
             event.sessionsAllowed = outerObj.getString("sessions_allowed");
+            event.setMemberAccess(outerObj.getBoolean("memberAccess"));
+            Log.e("TAG", "gettingApiResponse: "+outerObj.getBoolean("memberAccess") );
 
             if (!outerObj.isNull("sessions")) {
                 JSONArray sessionInfo = outerObj.getJSONArray("sessions");

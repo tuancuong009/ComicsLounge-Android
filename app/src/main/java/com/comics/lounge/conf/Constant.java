@@ -21,6 +21,7 @@ public class Constant {
     public static String VIRTUALMART_STATE_ID = "42";
 
     public static String FREE_TICKETS = "free_tickets";
+    public static String PRINT_TICKETS = "printed_tickets";
     public static String PAID_TICKETS = "paid_tickets";
 
     public static String STATUS_CANCELLED = "Cancelled";
