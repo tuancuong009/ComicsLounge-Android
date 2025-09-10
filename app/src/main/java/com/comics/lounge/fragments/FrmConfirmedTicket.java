@@ -91,10 +91,10 @@ public class FrmConfirmedTicket extends Fragment {
                                             name = objItem.optString("product_name");
                                             orderDate = objItem.optString("event_date");
                                             orderTime = objItem.optString("showtime");
-                                            if (objItem.optString("show_type").equals("Show Only")){
+                                            if (objItem.optString("show_type").equals("Show Only") || objItem.optString("product_type").equals("printed")){
                                                 showTicket++;
                                             }
-                                            if (objItem.optString("show_type").equals("Show with meal")){
+                                            if (objItem.optString("show_type").equals("Show with meal") && objItem.optString("product_type").equals("paid")){
                                                 mealTicket++;
                                             }
                                         }

@@ -379,8 +379,7 @@
                         android:text="@string/gold_pass_ticket"
                         android:textSize="14dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:textColor="@color/colorPrimary"
-                        android:visibility="gone" />
+                        android:textColor="@color/colorPrimary" />
                     <LinearLayout
                         android:gravity="center_horizontal"
                         android:layout_gravity="center_horizontal"

@@ -469,6 +469,7 @@ They will be sent their Membership access details.  "</string>
     <string name="maximum_of_10_printed_tickets_per_show">(maximum of 10 printed tickets per show)</string>
     <string name="discount_gold_pass">Discount gold pass:</string>
     <string name="discount_printed_tickets">Discount Printed tickets:</string>
+    <string name="printed_ticket">Printed Ticket:</string>
     <string-array name="month_array">
         <item>Month</item>
         <item>January</item>

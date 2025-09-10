@@ -528,12 +528,12 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
                 } else {
                     bottomTimeViewLayout.setVisibility(View.GONE);
                 }
-                Log.e("TAG", "serviceEnd: "+eventDetail.isMemberAccess() );
-                if (eventDetail.isMemberAccess()) {
-                    tvTicketInfo.setVisibility(View.VISIBLE);
-                } else {
-                    tvTicketInfo.setVisibility(View.GONE);
-                }
+//                Log.e("TAG", "serviceEnd: "+eventDetail.isMemberAccess() );
+//                if (eventDetail.isMemberAccess()) {
+//                    tvTicketInfo.setVisibility(View.VISIBLE);
+//                } else {
+//                    tvTicketInfo.setVisibility(View.GONE);
+//                }
                 mainLayout.setVisibility(View.VISIBLE);
             }
         } else if (serviceName.equals(WalletService.SERVICE_NAME)) {

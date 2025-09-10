@@ -8,7 +8,8 @@ public class UrlCollection {
     public static final String PRIVACY_POLICY_URL = "https://thecomicslounge.com.au/privacy-policies.html";
     public static final String TEMS_CON_URL = "https://thecomicslounge.com.au/termsandconditions.html";
 //    public static final String BASE_URL = "https://thecomicslounge.com.au/cs2/api/"; // Live
-  public static final String BASE_URL = "https://sandbox.thecomicslounge.com.au/cs2/api/"; // Test
+    public static final String BASE_URL = "https://thecomicslounge.com.au/cs3/api/"; // Test
+//  public static final String BASE_URL = "https://sandbox.thecomicslounge.com.au/cs2/api/"; // Test
     // public static final String BASE_URL = "http://new.thecomicslounge.com.au/cs2/api/"; unused test
     public static final String LOGIN = BASE_URL + "login.php";
     public static final String EVENT = BASE_URL + "event/future_event.php";

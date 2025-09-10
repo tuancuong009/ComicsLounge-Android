@@ -320,67 +320,58 @@ public class MobileVerificationActivity extends AbstractBaseActivity implements 
 
     @Override
     public void serviceEnd(String msg, String serviceName) {
-        if (serviceName.equals(RegisterService.SERVICE_NAME)) {
-            showSwitcher(loaderSwitcher, 0);
-            if (registerServiceManager.getResponseMsg() != null) {
+        switch (serviceName) {
+            case RegisterService.SERVICE_NAME -> {
+                showSwitcher(loaderSwitcher, 0);
+                if (registerServiceManager.getResponseMsg() != null) {
 
-                if (!registerServiceManager.getServiceStatus().toLowerCase().equals(SUCCESS)) {
-                    DialogUtils.showInfoAlert(this, getString(R.string.app_name), registerServiceManager.getResponseMsg());
-                } else {
-//                    Toast.makeText(this, registerServiceManager.getResponseMsg(), Toast.LENGTH_LONG).show();
-                }
+                    if (!registerServiceManager.getServiceStatus().toLowerCase().equals(SUCCESS)) {
+                        DialogUtils.showInfoAlert(this, getString(R.string.app_name), registerServiceManager.getResponseMsg());
+                    }
 
-                //displaySnackBarMessage(registerServiceManager.getResponseMsg());
-                //DialogUtils.showInfoAlert(this, getString(R.string.app_name), registerServiceManager.getResponseMsg());
-                if (registerServiceManager.getUserId() != null) {
-                    // add loader here
-                    userId = registerServiceManager.getUserId();
-                    otpSendServiceManager.prepareWebServiceJob();
-                    JSONObject otpObj = new JSONObject();
-                    try {
-                        otpObj.put("user_id", registerServiceManager.getUserId());
-                        otpObj.put("country_phone_code", "61");
-                        otpObj.put("phone_number",mobileNoEdt.getText().toString().trim());
-                        //otpObj.put("timestamp", System.currentTimeMillis());
-                        otpObj.put("otp_type", OTP_TYPE_PHONE);
 
-                        /*if (screenFlow == HOME) {
+                    if (registerServiceManager.getUserId() != null) {
+                        // add loader here
+                        userId = registerServiceManager.getUserId();
+                        otpSendServiceManager.prepareWebServiceJob();
+                        JSONObject otpObj = new JSONObject();
+                        try {
+                            otpObj.put("user_id", registerServiceManager.getUserId());
+                            otpObj.put("country_phone_code", "61");
+                            otpObj.put("phone_number", mobileNoEdt.getText().toString().trim());
                             otpObj.put("otp_type", OTP_TYPE_PHONE);
-                        } else {
-                            otpObj.put("otp_type", OTP_TYPE_BOTH);
-                        }*/
 
-                        otpSendServiceManager.feedParamsWithoutKey(otpObj.toString());
-                        otpSendServiceManager.featchData();
-                        showSwitcher(loaderSwitcher, 1);    //Show loading
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        displaySnackBarMessage("OTP does not send pleas try again");
+                            otpSendServiceManager.feedParamsWithoutKey(otpObj.toString());
+                            otpSendServiceManager.featchData();
+                            showSwitcher(loaderSwitcher, 1);    //Show loading
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            displaySnackBarMessage("OTP does not send pleas try again");
+                        }
                     }
                 }
             }
-        } else if (serviceName.equals(OtpSendService.SERVICE_NAME)) {
-            onOTPSent();
-        } else if (serviceName.equals(OtpVerifyService.SERVICE_NAME)) {
-            if (otpVerifyServiceManager.getServiceStatus() != null && !otpVerifyServiceManager.getServiceStatus().equals(" ")) {
-                if (otpVerifyServiceManager.getServiceStatus().toLowerCase().equals(SUCCESS)) {
-                    onOTPVerified();
+            case OtpSendService.SERVICE_NAME -> onOTPSent();
+            case OtpVerifyService.SERVICE_NAME -> {
+                if (otpVerifyServiceManager.getServiceStatus() != null && !otpVerifyServiceManager.getServiceStatus().equals(" ")) {
+                    if (otpVerifyServiceManager.getServiceStatus().toLowerCase().equals(SUCCESS)) {
+                        onOTPVerified();
+                    } else {
+                        showSwitcher(loaderSwitcher, 0);
+                        verifiCOdeEdt.setFocusable(true);
+                        displaySnackBarMessage(otpVerifyServiceManager.getResponseMsg());
+                    }
                 } else {
                     showSwitcher(loaderSwitcher, 0);
                     verifiCOdeEdt.setFocusable(true);
-                    displaySnackBarMessage(otpVerifyServiceManager.getResponseMsg());
+                    displaySnackBarMessage(getString(R.string.pls_try_again_str));
                 }
-            } else {
-                showSwitcher(loaderSwitcher, 0);
-                verifiCOdeEdt.setFocusable(true);
-                displaySnackBarMessage(getString(R.string.pls_try_again_str));
             }
-
-
-        } else if (serviceName.equals(EditProfileService.SERVICE_NAME)) {
-            showSwitcher(loaderSwitcher, 0);
-            updateSessionProfile();
-            finish();
+            case EditProfileService.SERVICE_NAME -> {
+                showSwitcher(loaderSwitcher, 0);
+                updateSessionProfile();
+                finish();
+            }
         }
     }
 

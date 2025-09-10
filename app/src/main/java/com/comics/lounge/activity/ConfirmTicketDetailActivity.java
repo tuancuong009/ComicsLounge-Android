@@ -53,19 +53,22 @@ public class ConfirmTicketDetailActivity extends AbstractBaseActivity implements
     private AppCompatTextView toalPurchaseTxt;
     private RecyclerView showOnlyRV;
     private RecyclerView withMealRV;
+    private RecyclerView rcvPrinted;
     private String userId;
     private ConfirmTicket confirmTicket;
     private List<BookingHistory> showOnlyList = null;
     private List<BookingHistory> withMealList = null;
+    private List<BookingHistory> printedList = null;
     private ShowOnlyListItemAdpter showOnlyListItemAdpter = null;
     private ShowOnlyListItemAdpter withMealListItemAdpter = null;
+    private ShowOnlyListItemAdpter printedAdpter = null;
     private DeleteTicketServiceManager deleteTicketServiceManager = null;
     private ViewSwitcher viewSwitcherlayout;
     private LinearLayout mainLayout;
     private ConfirmTickertServiceManager confirmTickertServiceManager = null;
     private int tempOrderId = 0;
     private SessionManager sessionManager;
-    private View llShowOnly, llShowWithMeal;
+    private View llShowOnly, llShowWithMeal, llPrinted;
     private String orderDate;
     private String orderTime;
     ImageView btBack;
@@ -84,21 +87,21 @@ public class ConfirmTicketDetailActivity extends AbstractBaseActivity implements
         dateTxt = findViewById(R.id.date_time_txt);
         toalPurchaseTxt = findViewById(R.id.total_purchase_ticket_txt);
         showOnlyRV = findViewById(R.id.show_only_rv);
+        rcvPrinted = findViewById(R.id.rcv_print);
         llShowOnly = findViewById(R.id.llShowOnly);
         llShowWithMeal = findViewById(R.id.llShowWithMeal);
         btBack = findViewById(R.id.bt_back);
-
-        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
-        showOnlyRV.setLayoutManager(linearLayoutManager1);
-
-        /*menuRight.setVisibility(View.INVISIBLE);
-        leftArrow.setImageResource(R.drawable.ic_arrow_back_black_24dp);
-        leftArrow.setScaleX(ResourcesCompat.getFloat(getApplicationContext().getResources(), R.dimen.back_awwor_flot_size));
-        leftArrow.setScaleY(ResourcesCompat.getFloat(getApplicationContext().getResources(), R.dimen.back_awwor_flot_size));*/
-
+        llPrinted = findViewById(R.id.llPrinted);
         withMealRV = findViewById(R.id.with_neal_rv);
-        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(this);
-        withMealRV.setLayoutManager(linearLayoutManager2);
+
+        LinearLayoutManager llMngShow = new LinearLayoutManager(this);
+        showOnlyRV.setLayoutManager(llMngShow);
+
+        LinearLayoutManager llMngMeal = new LinearLayoutManager(this);
+        withMealRV.setLayoutManager(llMngMeal);
+
+        LinearLayoutManager llMngPrint = new LinearLayoutManager(this);
+        rcvPrinted.setLayoutManager(llMngPrint);
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -110,6 +113,7 @@ public class ConfirmTicketDetailActivity extends AbstractBaseActivity implements
 
         showOnlyList = new LinkedList<>();
         withMealList = new LinkedList<>();
+        printedList = new LinkedList<>();
 
         deleteTicketServiceManager = new DeleteTicketServiceManager(this, this);
 
@@ -221,7 +225,7 @@ public class ConfirmTicketDetailActivity extends AbstractBaseActivity implements
         } else if (serviceName.equals(ConfirmTickertService.SERVICE_NAME)) {
 
             viewSwitcherlayout.showPrevious();
-            if (confirmTickertServiceManager.getConfirmTickets().size() > 0) {
+            if (!confirmTickertServiceManager.getConfirmTickets().isEmpty()) {
                 confirmTicket = confirmTickertServiceManager.getConfirmTickets().get(0);
                 orderId.setText("Order ID : #" + confirmTicket.getOrderId());
                 perfornameTxt.setText(confirmTicket.getBookingHistoryList().get(0).getProductName() + " - "
@@ -233,13 +237,22 @@ public class ConfirmTicketDetailActivity extends AbstractBaseActivity implements
                 toalPurchaseTxt.setText("Total Purchase Tickets : " + confirmTicket.getBookingHistoryList().size() + " Tickets");
                 showOnlyList.clear();
                 withMealList.clear();
+                printedList.clear();
                 boolean isAllTickerCancelled = true;
 
                 for (BookingHistory bookingHistory : confirmTicket.getBookingHistoryList()) {
                     if (bookingHistory.getShowType().toLowerCase().equals((Constant.SHOW_ONLY_STR).toLowerCase())) {
-                        showOnlyList.add(bookingHistory);
+                        if (bookingHistory.getProductType().equals("printed")){
+                            printedList.add(bookingHistory);
+                        }else {
+                            showOnlyList.add(bookingHistory);
+                        }
                     } else {
-                        withMealList.add(bookingHistory);
+                        if (bookingHistory.getProductType().equals("printed")){
+                            printedList.add(bookingHistory);
+                        }else {
+                            withMealList.add(bookingHistory);
+                        }
                     }
 
                     if (!bookingHistory.getProductStatus().equals(STATUS_CANCELLED)) {
@@ -252,17 +265,19 @@ public class ConfirmTicketDetailActivity extends AbstractBaseActivity implements
                 } else {
                     showOnlyListItemAdpter = new ShowOnlyListItemAdpter(getApplicationContext(), showOnlyList, this);
                     showOnlyRV.setAdapter(showOnlyListItemAdpter);
-                    showOnlyListItemAdpter.notifyDataSetChanged();
                 }
-
                 if (withMealList.isEmpty()) {
                     llShowWithMeal.setVisibility(View.GONE);
                 } else {
                     withMealListItemAdpter = new ShowOnlyListItemAdpter(getApplicationContext(), withMealList, this);
                     withMealRV.setAdapter(withMealListItemAdpter);
-                    withMealListItemAdpter.notifyDataSetChanged();
                 }
-
+                if (printedList.isEmpty()) {
+                    llPrinted.setVisibility(View.GONE);
+                } else {
+                    printedAdpter = new ShowOnlyListItemAdpter(getApplicationContext(), printedList, this);
+                    rcvPrinted.setAdapter(printedAdpter);
+                }
                 if (isAllTickerCancelled) {
                     downloadLayout.setVisibility(View.GONE);
                 }
