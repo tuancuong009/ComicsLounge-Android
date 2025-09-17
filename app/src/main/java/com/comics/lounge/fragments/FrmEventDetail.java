@@ -226,9 +226,11 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
         plusShowOnlyTxt.setOnClickListener(v -> {
             if (dateStr != null && !dateStr.equals("")) {
                 if (showOnly != null) {
-                    showOnlyMeal += 1;
-                    calculateTotal(true, showOnlyMeal, showOnlyPlusMinus, showOnlyMealCap, showOnly, showOnlyTotal);
-                    eventPriceDatesList.add(showOnly);
+                    if (showOnlyMeal < 10) {
+                        showOnlyMeal += 1;
+                        calculateTotal(true, showOnlyMeal, showOnlyPlusMinus, showOnlyMealCap, showOnly, showOnlyTotal);
+                        eventPriceDatesList.add(showOnly);
+                    }
                 } else {
                     Toast.makeText(activity, getString(R.string.show_with_meal_qty) + " " + getResources().getString(R.string.ticket_not_avilble), Toast.LENGTH_SHORT).show();
                 }
@@ -258,16 +260,17 @@ public class FrmEventDetail extends Fragment implements ServiceCallback {
 
 
         plusMeal.setOnClickListener(v -> {
-            if (dateStr != null && !dateStr.equals("")) {
+            if (dateStr != null && !dateStr.isEmpty()) {
                 if (showWithOnly != null) {
-                    withMeal += 1;
-                    grandTotal += 1;
-                    calculateTotal(false, withMeal, mealPlusMinTxt, showWithMealCap, showWithOnly, mealTotalPrice);
-                    eventPriceDatesList.add(showWithOnly);
+                    if (withMeal < 10) {
+                        withMeal += 1;
+                        grandTotal += 1;
+                        calculateTotal(false, withMeal, mealPlusMinTxt, showWithMealCap, showWithOnly, mealTotalPrice);
+                        eventPriceDatesList.add(showWithOnly);
+                    }
                 } else {
                     Toast.makeText(activity, Constant.SHOW_WITH_MEAL_STR + " " + getResources().getString(R.string.ticket_not_avilble), Toast.LENGTH_SHORT).show();
                 }
-
             } else {
                 Toast.makeText(activity, getResources().getString(R.string.pls_select_date), Toast.LENGTH_SHORT).show();
             }

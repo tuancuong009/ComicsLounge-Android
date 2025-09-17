@@ -175,10 +175,11 @@
                             android:orientation="horizontal">
 
                             <androidx.appcompat.widget.AppCompatImageView
+                                android:padding="5dp"
                                 android:id="@+id/minus_show_only"
                                 android:src="@mipmap/ic_minus"
-                                android:layout_width="12dp"
-                                android:layout_height="21dp" />
+                                android:layout_width="26dp"
+                                android:layout_height="31dp" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_marginTop="2dp"
@@ -197,10 +198,11 @@
                                 android:fontFamily="@font/poppins_regular" />
 
                             <androidx.appcompat.widget.AppCompatImageView
+                                android:padding="5dp"
                                 android:id="@+id/plus_show_only"
                                 android:src="@mipmap/ic_plus"
-                                android:layout_width="14dp"
-                                android:layout_height="21dp" />
+                                android:layout_width="28dp"
+                                android:layout_height="35dp" />
 
                         </LinearLayout>
 
@@ -233,8 +235,9 @@
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/minus_meal_txt"
                                 android:src="@mipmap/ic_minus"
-                                android:layout_width="12dp"
-                                android:layout_height="21dp" />
+                                android:layout_width="26dp"
+                                android:layout_height="31dp"
+                                android:padding="5dp"/>
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_marginTop="2dp"
@@ -253,10 +256,11 @@
                                 android:fontFamily="@font/poppins_regular"/>
 
                             <androidx.appcompat.widget.AppCompatImageView
+                                android:padding="5dp"
                                 android:id="@+id/plus_meal_only"
                                 android:src="@mipmap/ic_plus"
-                                android:layout_width="14dp"
-                                android:layout_height="21dp" />
+                                android:layout_width="28dp"
+                                android:layout_height="35dp" />
 
                         </LinearLayout>
                     </LinearLayout>

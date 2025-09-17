@@ -30,10 +30,10 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:layout_marginHorizontal="24dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginHorizontal="24dp"
                         android:paddingVertical="10dp"
                         android:gravity="center"
                         android:orientation="vertical">
@@ -78,7 +78,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/grey_5"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -170,6 +173,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:id="@+id/tv_cap_use_print"
                                 android:textAllCaps="true"
                                 android:layout_marginTop="2dp"
                                 android:layout_width="wrap_content"
@@ -178,6 +182,7 @@
                                 android:textColor="@color/bg_splash"
                                 android:fontFamily="@font/poppins_bold"/>
                             <ImageView
+                                android:id="@+id/iv_dropdown"
                                 android:layout_marginStart="5dp"
                                 android:layout_width="@dimen/_18sdp"
                                 android:layout_height="@dimen/_18sdp"
@@ -186,13 +191,13 @@
                         <androidx.cardview.widget.CardView
                             android:foreground="@drawable/bg_stroke_grey"
                             android:id="@+id/cv_print_tick"
-                            android:visibility="gone"
                             android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="50dp"
                             app:cardElevation="0dp">
                             <TextView
+                                android:text="0 tickets"
                                 android:layout_marginHorizontal="12dp"
                                 android:layout_marginVertical="2dp"
                                 android:textColor="@color/grey_3"
@@ -202,6 +207,11 @@
                                 android:fontFamily="@font/roboto"/>
                         </androidx.cardview.widget.CardView>
                     </RelativeLayout>
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/grey_5"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -245,7 +255,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginRight="24dp"
                             android:orientation="horizontal">
 
@@ -275,9 +285,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
-                            android:layout_marginTop="11dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="24dp"
-                            android:layout_marginBottom="5dp"
                             android:orientation="horizontal">
 
                             <androidx.appcompat.widget.AppCompatTextView
@@ -302,7 +311,7 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:visibility="gone"
+                            android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
@@ -313,10 +322,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/poppins_regular"
                                 android:text="@string/sub_total_str"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/booking_history_font_size" />
+                                android:textColor="@color/black"/>
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/discount_subtotal_txt"
@@ -326,73 +334,13 @@
                                 android:fontFamily="@font/roboto"
                                 android:text="@string/zero_str"
                                 android:textAlignment="textEnd"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/booking_history_font_size" />
+                                android:textColor="@color/black" />
                         </LinearLayout>
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="24dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="24dp"
-                            android:orientation="horizontal"
-                            >
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_bold"
-                                android:text="@string/discount_gold_pass"
-                                android:textAllCaps="true"
-                                android:textColor="@color/login_btn_color"
-                                android:textSize="16sp" />
-
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_alignParentEnd="true"
-                                    android:id="@+id/dc_gold_pass"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:text="@string/zero_str"
-                                    android:textAlignment="textEnd"
-                                    android:textColor="@color/login_btn_color"
-                                    android:textSize="16sp" />
-                        </RelativeLayout>
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="24dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="24dp"
-                            android:orientation="horizontal"
-                            >
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_bold"
-                                android:text="@string/discount_printed_tickets"
-                                android:textAllCaps="true"
-                                android:textColor="@color/login_btn_color"
-                                android:textSize="16sp" />
-
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_alignParentEnd="true"
-                                    android:id="@+id/dc_print_tick"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:text="0"
-                                    android:textColor="@color/login_btn_color"
-                                    android:textSize="16sp" />
-                        </RelativeLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="24dp"
                             android:orientation="horizontal"
                             >
@@ -404,8 +352,7 @@
                                 android:fontFamily="@font/poppins_bold"
                                 android:text="@string/discount_str"
                                 android:textAllCaps="true"
-                                android:textColor="@color/login_btn_color"
-                                android:textSize="16sp" />
+                                android:textColor="@color/login_btn_color" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -422,72 +369,82 @@
                                     android:fontFamily="@font/poppins_bold"
                                     android:text="@string/zero_str"
                                     android:textAlignment="textEnd"
-                                    android:textColor="@color/login_btn_color"
-                                    android:textSize="16sp" />
+                                    android:textColor="@color/login_btn_color" />
                             </LinearLayout>
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:visibility="gone"
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="24dp"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            >
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.5"
-                                android:fontFamily="@font/roboto"
-                                android:text="@string/sub_total_str"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/booking_history_font_size" />
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="@string/discount_gold_pass"
+                                android:textAllCaps="true"
+                                android:textColor="@color/login_btn_color" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_alignParentEnd="true"
+                                    android:id="@+id/dc_gold_pass"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:text="@string/zero_str"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/login_btn_color" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="24dp"
+                            android:orientation="horizontal"
+                            >
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/sub_toatl_tax_txt"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/roboto"
-                                android:text="@string/zero_str"
-                                android:textAlignment="textEnd"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/booking_history_font_size" />
-                        </LinearLayout>
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="@string/discount_printed_tickets"
+                                android:textAllCaps="true"
+                                android:textColor="@color/login_btn_color" />
 
-                       <!-- <LinearLayout
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:layout_gravity="end"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginRight="65dp"
-                            android:gravity="end">
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"
-                                app:srcCompat="@drawable/ic_plus_bold" />
-                        </LinearLayout>-->
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_alignParentEnd="true"
+                                    android:id="@+id/dc_print_tick"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:text="0"
+                                    android:textColor="@color/login_btn_color" />
+                        </RelativeLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="24dp"
                             android:orientation="horizontal">
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_dc_tick_cap"
                                 android:textAllCaps="true"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
                                 android:fontFamily="@font/poppins_regular"
-                                android:text="Discount Tickets:"
-                                android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:text="@string/discount_tickets"
+                                android:textColor="@color/black" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -503,18 +460,43 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:text="0"
+                                    android:text="-$0.00"
                                     android:textAlignment="textEnd"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
+                                    android:textColor="@color/black" />
                             </LinearLayout>
 
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/sub_total_str"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/sub_toatl_tax_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/zero_str"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black" />
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="24dp"
                             android:orientation="horizontal">
 
@@ -526,8 +508,7 @@
                                 android:layout_weight="0.5"
                                 android:fontFamily="@font/poppins_regular"
                                 android:text="@string/booking_charge"
-                                android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textColor="@color/black" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -545,15 +526,14 @@
                                     android:fontFamily="@font/roboto"
                                     android:text="@string/zero_str"
                                     android:textAlignment="textEnd"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
+                                    android:textColor="@color/black" />
                             </LinearLayout>
 
                         </LinearLayout>
 
 
                         <LinearLayout
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
@@ -568,7 +548,7 @@
                                 android:text="@string/total_str"
                                 android:textAllCaps="true"
                                 android:textColor="@color/black"
-                                android:textSize="14dp" />
+                                android:textSize="16dp" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/grand_total_txt"
@@ -579,7 +559,7 @@
                                 android:text="@string/zero_str"
                                 android:textAlignment="textEnd"
                                 android:textColor="@color/black"
-                                android:textSize="14dp" />
+                                android:textSize="16dp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -595,22 +575,20 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textAllCaps="true"
                                 android:text="@string/wallet_balance"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="@dimen/booking_history_font_size" />
+                                android:textColor="@color/colorPrimary" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/free_ticket_txt"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/poppins_regular"
                                 android:text="@string/zero_str"
                                 android:textAlignment="textEnd"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="@dimen/booking_history_font_size"
-                                android:textStyle="bold" />
+                                android:textColor="@color/colorPrimary" />
                         </LinearLayout>
 
                         <View
@@ -635,23 +613,21 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/poppins_regular"
                                 android:text="@string/total_str"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/booking_history_font_size"
-                                android:textStyle="bold" />
+                                android:textAllCaps="true" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/free_tic_grand_total"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/poppins_regular"
                                 android:text="@string/zero_str"
                                 android:textAlignment="textEnd"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/booking_history_font_size"
-                                android:textStyle="bold" />
+                                />
                         </LinearLayout>
 
                     </LinearLayout>

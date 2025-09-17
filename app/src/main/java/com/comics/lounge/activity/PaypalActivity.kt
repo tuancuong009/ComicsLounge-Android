@@ -150,6 +150,7 @@ class PaypalActivity : AppCompatActivity(), DropInListener, PayPalListener {
     }
 
     override fun onDropInFailure(error: Exception) {
+        Log.e("TAG", "onDropInFailure: "+error.localizedMessage )
         setResult(false, "Payment cancelled")
         finish()
     }

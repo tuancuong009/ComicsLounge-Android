@@ -470,6 +470,7 @@ They will be sent their Membership access details.  "</string>
     <string name="discount_gold_pass">Discount gold pass:</string>
     <string name="discount_printed_tickets">Discount Printed tickets:</string>
     <string name="printed_ticket">Printed Ticket:</string>
+    <string name="discount_tickets">Discount Tickets:</string>
     <string-array name="month_array">
         <item>Month</item>
         <item>January</item>
