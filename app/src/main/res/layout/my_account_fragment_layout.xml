@@ -236,6 +236,7 @@
                     android:background="@color/grey_5"
                     android:layout_marginTop="15dp"/>
                 <LinearLayout
+                    android:layout_marginBottom="30dp"
                     android:id="@+id/bt_mb_video"
                     android:paddingVertical="10dp"
                     android:background="@drawable/bg_button"

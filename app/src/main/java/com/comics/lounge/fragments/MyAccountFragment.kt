@@ -1,6 +1,5 @@
 package com.comics.lounge.fragments
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,15 +9,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.comics.lounge.ComicsLoungeApp
 import com.comics.lounge.R
-import com.comics.lounge.activity.*
-import com.comics.lounge.conf.GlobalConf
+import com.comics.lounge.activity.ChangePasswordActivity
+import com.comics.lounge.activity.MembershipActivity
+import com.comics.lounge.activity.NewMain
+import com.comics.lounge.activity.ShareMembershipActivity
 import com.comics.lounge.databinding.MyAccountFragmentLayoutBinding
 import com.comics.lounge.retrofit.RetroApi
 import com.comics.lounge.sessionmanager.SessionManager
 import com.comics.lounge.utils.DatesUtils
-import com.comics.lounge.utils.ToolbarUtils.loanAppLogo
 import com.comics.lounge.utils.UserUtils
-import java.util.*
 
 
 class MyAccountFragment : Fragment() {
@@ -52,7 +51,7 @@ class MyAccountFragment : Fragment() {
             startActivity(Intent(requireActivity(), ChangePasswordActivity::class.java))
         }
         binding.renewMembership.setOnClickListener {
-            startActivity(Intent(requireActivity(), MembershipActivity::class.java))
+            parentActivity?.addFrmDetail(FrmBecomeMb())
         }
         binding.btMbVideo.setOnClickListener { parentActivity!!.popupVideo() }
         updateUserDetail()
@@ -85,8 +84,7 @@ class MyAccountFragment : Fragment() {
                     resources.getString(R.string.you_buy_membership))
             builder.setPositiveButton("ok"){
                     dialog, which -> dialog.cancel()
-                val intent = Intent(requireActivity(), MembershipActivity::class.java)
-                startActivity(intent)
+                parentActivity?.addFrmDetail(FrmBecomeMb())
             }
             builder.setNegativeButton("Dismiss"){
                     dialog, which -> dialog.cancel()
