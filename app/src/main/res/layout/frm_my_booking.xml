@@ -442,9 +442,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
-                                android:fontFamily="@font/poppins_regular"
+                                android:fontFamily="@font/poppins_bold"
                                 android:text="@string/discount_tickets"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/login_btn_color" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -459,10 +459,10 @@
                                     android:id="@+id/dc_ticket"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/roboto"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:text="-$0.00"
                                     android:textAlignment="textEnd"
-                                    android:textColor="@color/black" />
+                                    android:textColor="@color/login_btn_color" />
                             </LinearLayout>
 
                         </LinearLayout>

@@ -380,9 +380,9 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
     // calculate after use print ticket
     private void calculateUsePrintTick(){
         if (selectedNumber == 1) {
-            binding.tvPrintTick.setText(selectedNumber + " ticket");
+            binding.tvPrintTick.setText(selectedNumber + " credit");
         }else {
-            binding.tvPrintTick.setText(selectedNumber + " tickets");
+            binding.tvPrintTick.setText(selectedNumber + " credits");
         }
         if (selectedNumber > 0){
             binding.tvDcTickCap.setText(getString(R.string.discount_tickets)+" "+NumberUtils.formatMoney(NumberUtils.parseMoney(bookTicketPojo.getShowOnlyPrice()))+"*"+selectedNumber);
