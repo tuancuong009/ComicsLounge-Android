@@ -160,7 +160,7 @@ public class Home extends AppCompatActivity {
         }
         list.add(new HomeMenu(R.mipmap.ic_gallery, getString(R.string.gallery)));
         list.add(new HomeMenu(R.mipmap.ic_offers, getString(R.string.offers)));
-        list.add(new HomeMenu(R.mipmap.ic_contacts, getString(R.string.contacts)));
+        list.add(new HomeMenu(R.mipmap.ic_contacts, getString(R.string.find_us)));
         list.add(new HomeMenu(R.mipmap.ic_concierge, getString(R.string.concierge)));
         adapter.notifyDataSetChanged();
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task1 -> {

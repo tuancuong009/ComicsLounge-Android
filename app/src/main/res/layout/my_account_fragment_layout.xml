@@ -44,6 +44,8 @@
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_width="match_parent"
                     android:id="@+id/renew_membership"
                     style="@style/CalenderButton"
                     android:layout_gravity="center"
@@ -51,8 +53,16 @@
                     android:text="@string/renew_membership"
                     android:backgroundTint="@color/colorPrimary"
                     android:visibility="gone"/>
-
-
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/redeem_membership"
+                    style="@style/CalenderButton"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/redeem_membership"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:visibility="gone"/>
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/edit_account_txt"
                     android:layout_width="wrap_content"

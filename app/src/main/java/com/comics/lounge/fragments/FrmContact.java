@@ -63,33 +63,33 @@ public class FrmContact extends Fragment implements OnMapReadyCallback {
         binding = FrmContactBinding.inflate(getLayoutInflater());
         init();
 
-        binding.edtMess.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                int strLength = s.toString().trim().length();
-                binding.tvEdtLength.setText(strLength + " / 100");
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        binding.btnSubmit.setOnClickListener(v -> {
-            AppUtil.hideKeyboard(v);
-            String s = binding.edtMess.getText().toString().trim();
-            if (TextUtils.isEmpty(s)) {
-                Toast.makeText(activity, getString(R.string.message_can_t_blank), Toast.LENGTH_SHORT).show();
-            } else {
-                AppUtil.showLoading(v.getContext());
-                sendMess(s);
-            }
-        });
+//        binding.edtMess.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                int strLength = s.toString().trim().length();
+//                binding.tvEdtLength.setText(strLength + " / 100");
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
+//        binding.btnSubmit.setOnClickListener(v -> {
+//            AppUtil.hideKeyboard(v);
+//            String s = binding.edtMess.getText().toString().trim();
+//            if (TextUtils.isEmpty(s)) {
+//                Toast.makeText(activity, getString(R.string.message_can_t_blank), Toast.LENGTH_SHORT).show();
+//            } else {
+//                AppUtil.showLoading(v.getContext());
+//                sendMess(s);
+//            }
+//        });
         binding.llAddress.setOnClickListener(v -> {
             String strUri = "http://maps.google.com/maps?q=loc:" + Constant.LATITUDE + "," + Constant.LONGITUDE + " (" + "The Comic's Lounge" + ")";
             Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(strUri));
@@ -111,8 +111,8 @@ public class FrmContact extends Fragment implements OnMapReadyCallback {
             emailIntent.setData(Uri.parse(mailto));
             startActivity(emailIntent);
         });
-        binding.rlContact.setOnClickListener(v -> activity.addFrmDetail(new FrmContactOurTeam()));
-        binding.rlFunEvent.setOnClickListener(v -> activity.addFrmDetail(new FrmFunEvent()));
+//        binding.rlContact.setOnClickListener(v -> activity.addFrmDetail(new FrmContactOurTeam()));
+//        binding.rlFunEvent.setOnClickListener(v -> activity.addFrmDetail(new FrmFunEvent()));
         return binding.getRoot();
     }
 
@@ -131,38 +131,38 @@ public class FrmContact extends Fragment implements OnMapReadyCallback {
         sessionManager = new SessionManager(activity);
 
         binding.rlMap.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (AppUtil.getScreenSize(activity).widthPixels / 1.24)));
-        binding.edtMess.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (AppUtil.getScreenSize(activity).widthPixels / 1.24)));
+//        binding.edtMess.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (AppUtil.getScreenSize(activity).widthPixels / 1.24)));
     }
 
     // send message
-    private void sendMess(String s) {
-        RetroApi api = ComicsLoungeApp.getRetroApi();
-        api.sendMess(Integer.parseInt(sessionManager.getCurrentlyLoggedUserId()), s).enqueue(new Callback<JsonObject>() {
-            @Override
-            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                JSONObject jsonObject;
-                if (response.isSuccessful()) {
-                    try {
-                        jsonObject = new JSONObject(String.valueOf(response.body()));
-                        if (jsonObject.optString("status").equals("Success")) {
-                            binding.edtMess.setText("");
-                            binding.edtMess.clearFocus();
-                        }
-                        Toast.makeText(activity, jsonObject.optString("message"), Toast.LENGTH_SHORT).show();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                AppUtil.hideLoading();
-            }
-
-            @Override
-            public void onFailure(Call<JsonObject> call, Throwable t) {
-                AppUtil.hideLoading();
-                Toast.makeText(activity, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    private void sendMess(String s) {
+//        RetroApi api = ComicsLoungeApp.getRetroApi();
+//        api.sendMess(Integer.parseInt(sessionManager.getCurrentlyLoggedUserId()), s).enqueue(new Callback<JsonObject>() {
+//            @Override
+//            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//                JSONObject jsonObject;
+//                if (response.isSuccessful()) {
+//                    try {
+//                        jsonObject = new JSONObject(String.valueOf(response.body()));
+//                        if (jsonObject.optString("status").equals("Success")) {
+//                            binding.edtMess.setText("");
+//                            binding.edtMess.clearFocus();
+//                        }
+//                        Toast.makeText(activity, jsonObject.optString("message"), Toast.LENGTH_SHORT).show();
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//                AppUtil.hideLoading();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<JsonObject> call, Throwable t) {
+//                AppUtil.hideLoading();
+//                Toast.makeText(activity, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {

@@ -471,6 +471,9 @@ They will be sent their Membership access details.  "</string>
     <string name="discount_printed_tickets">Discount Comedy Credits:</string>
     <string name="printed_ticket">Comedy Credits:</string>
     <string name="discount_tickets">Discount Credits:</string>
+    <string name="chat_with_a_team_member">Chat with a Team Member</string>
+    <string name="find_us">Find Us</string>
+    <string name="redeem_membership">Redeem Membership</string>
     <string-array name="month_array">
         <item>Month</item>
         <item>January</item>

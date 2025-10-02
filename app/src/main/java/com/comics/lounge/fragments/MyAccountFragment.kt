@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import com.comics.lounge.ComicsLoungeApp
 import com.comics.lounge.R
 import com.comics.lounge.activity.ChangePasswordActivity
-import com.comics.lounge.activity.MembershipActivity
 import com.comics.lounge.activity.NewMain
 import com.comics.lounge.activity.ShareMembershipActivity
 import com.comics.lounge.databinding.MyAccountFragmentLayoutBinding
@@ -59,6 +58,9 @@ class MyAccountFragment : Fragment() {
         binding.llMbList.setOnClickListener {
             switchToMemberShipListActivity()
         }
+        binding.redeemMembership.setOnClickListener {
+            parentActivity?.addFrmDetail(ClaimMemberShipFragment())
+        }
 
         if (sessionManager.freeEventRestoredCount == "0") {
             binding.txtFreeEvent.text =
@@ -75,8 +77,8 @@ class MyAccountFragment : Fragment() {
         if (sessionManager.currentUser.memershipId != null  && sessionManager.currentUser.membership!!
             && sessionManager.currentUser.expireInDays?.toInt()!! <= 28
         ) {
-
             binding.renewMembership.visibility = View.VISIBLE
+            binding.redeemMembership.visibility = View.VISIBLE
             val builder = AlertDialog.Builder(requireActivity())
             builder.setTitle(resources.getString(R.string.buy_membership))
             builder.setCancelable(false)
@@ -94,6 +96,7 @@ class MyAccountFragment : Fragment() {
 
         }else{
             binding.renewMembership.visibility = View.GONE
+            binding.redeemMembership.visibility = View.GONE
         }
 
     }
