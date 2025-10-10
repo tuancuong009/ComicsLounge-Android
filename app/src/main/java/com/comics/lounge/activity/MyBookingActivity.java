@@ -94,7 +94,7 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
     NewMain activity;
     PopupWindow popupWindow;
     private int selectedNumber = 0;
-    int totalTicket;
+    int totalTicket, freeTicket = 0;
 
     @Nullable
     @Override
@@ -158,28 +158,28 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                     isFreeTicket = true;
                     totalPrice = NumberUtils.parseMoney(bookTicketPojo.getShowOnlyPrice()) *
                             bookTicketPojo.getFreeTicket() * 2;
-                    binding.discountTxt.setText("-"+NumberUtils.formatMoney(totalPrice));
+                    freeTicket = 2;
                 } else {
                     isFreeTicket = true;
                     totalPrice = NumberUtils.parseMoney(bookTicketPojo.getShowOnlyPrice()) *
                             bookTicketPojo.getFreeTicket() * 1;
-                    binding.discountTxt.setText("-"+NumberUtils.formatMoney(totalPrice));
+                    freeTicket = 1;
                 }
-                selectedNumber = 0;
-                binding.llPrintTick.setEnabled(false);
-                binding.tvCapUsePrint.setTextColor(activity.getColor(R.color.disable_input_color));
-                binding.ivDropdown.setColorFilter(activity.getColor(R.color.disable_input_color));
-                binding.tvPrintTick.setEnabled(false);
-                calculateUsePrintTick();
+                if ((freeTicket + selectedNumber) > totalTicket){
+                    if (selectedNumber > freeTicket) {
+                        selectedNumber -= freeTicket;
+                    }else {
+                        selectedNumber = 0;
+                    }
+                    calculateUsePrintTick();
+                }
+                binding.discountTxt.setText("-"+NumberUtils.formatMoney(totalPrice));
             } else {
                 totalPrice = 00.0;
                 binding.discountTxt.setText("-"+NumberUtils.formatMoney(0));
                 isFreeTicket = false;
                 binding.subToatlTaxTxt.setText(NumberUtils.formatMoney(bookTicketPojo.getGrandTotal()));
-                binding.llPrintTick.setEnabled(true);
-                binding.tvPrintTick.setEnabled(true);
-                binding.tvCapUsePrint.setTextColor(activity.getColor(R.color.colorAccent));
-                binding.ivDropdown.setColorFilter(activity.getColor(R.color.colorAccent));
+                freeTicket = 0;
             }
             calculateSubTotal();
             generateGrandTotal(isWalletCheck);
@@ -196,7 +196,7 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
         binding.withMealCapTxt.setText(getString(R.string.show_with_meal_qty) + " " +
                 NumberUtils.formatMoney(bookTicketPojo.getWithMealPrice()) + " * " + bookTicketPojo.getWithMealQty());
         binding.withMealTxt.setText(NumberUtils.formatMoney(bookTicketPojo.getWithMeaalTotal()));
-        totalTicket = bookTicketPojo.getShowOnlyQty() + bookTicketPojo.getWithMealQty();
+        totalTicket = Math.min(bookTicketPojo.getShowOnlyQty() + bookTicketPojo.getWithMealQty(), 10);
         binding.discountSubtotalTxt.setText(NumberUtils.formatMoney(bookTicketPojo.getGrandTotal()));
         binding.discountTxt.setText("-"+NumberUtils.formatMoney(totalPrice));
 
@@ -291,7 +291,7 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
         // Keep reference to all checkboxes to uncheck others
         List<CheckBox> checkBoxList = new ArrayList<>();
 
-        for (int i = 1; i <= Math.min(totalTicket, 10); i++) {
+        for (int i = 1; i <= totalTicket - freeTicket; i++) {
             LinearLayout rowLayout = new LinearLayout(activity);
             rowLayout.setOrientation(LinearLayout.HORIZONTAL);
             rowLayout.setPadding(6, 8, 6, 8);
@@ -322,21 +322,6 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                     selectedNumber = 0;
                     binding.llRead.setVisibility(View.GONE);
                     AppUtil.enableBt(binding.checkOutTick);
-                    if (sessionManager.getCurrentUser().getNoOfStrike() != null && sessionManager.getCurrentUser().getNoOfStrike() == 3) {
-                        binding.freeTicketHeading.setTextColor(ContextCompat.getColor(activity, R.color.disable_input_color));
-                        binding.freeTicketCaption.setTextColor(ContextCompat.getColor(activity, R.color.disable_input_color));
-                        binding.freeTicketCaption.setText("3 strikes(your membership is currently suspended)\n" +
-                                "renewal date is " + "(" + sessionManager.getCurrentUser().getActivationDate() + ")");
-                        binding.freeTicektCheck.setButtonTintList(ColorStateList.valueOf(ContextCompat.getColor(activity, R.color.disable_input_color)));
-                        binding.freeTicektCheck.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(activity, R.color.disable_input_color)));
-                        isViewHideOrShow(binding.freeTicektCheck, false);
-                    } else {
-                        if (bookTicketPojo.getFreeTicket() > 0 && bookTicketPojo.getWalletFreeTicket() > 0 && bookTicketPojo.getTotalFreeEventLeft() > 0) {
-                            enableMb();
-                        } else {
-                            disableMb();
-                        }
-                    }
                 }else {
                     selectedNumber = number;
 
@@ -355,7 +340,6 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
                     }else {
                         AppUtil.enableBt(binding.checkOutTick);
                     }
-                    disableMb();
                 }
                 calculateUsePrintTick();
                 popupWindow.dismiss();
@@ -374,7 +358,14 @@ public class MyBookingActivity extends Fragment implements ServiceCallback {
         );
 
         popupWindow.setElevation(10);
-        popupWindow.showAsDropDown(binding.llPrintTick, 0, 10);
+        popupView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+
+        int xOffset = binding.llPrintTick.getWidth() - popupView.getMeasuredWidth();
+        int yOffset = 0;
+
+        if (totalTicket - freeTicket > 0){
+            popupWindow.showAsDropDown(binding.llPrintTick, xOffset, yOffset);
+        }
     }
 
     // calculate after use print ticket

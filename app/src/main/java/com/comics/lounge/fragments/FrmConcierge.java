@@ -81,11 +81,11 @@ public class FrmConcierge extends Fragment {
                 binding.cvUnread.setVisibility(View.GONE);
             }
         });
-        if (activity.sessionManager.getCurrentUser().getMembership()){
-            binding.rlMbNotification.setVisibility(View.VISIBLE);
-        }else {
-            binding.rlMbNotification.setVisibility(View.GONE);
-        }
+//        if (Boolean.TRUE.equals(activity.sessionManager.getCurrentUser().getMembership())){
+//            binding.rlMbNotification.setVisibility(View.VISIBLE);
+//        }else {
+//            binding.rlMbNotification.setVisibility(View.GONE);
+//        }
     }
 
 //    // popup membership video
