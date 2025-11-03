@@ -1,5 +1,6 @@
 package com.comics.lounge.fragments;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
 
@@ -8,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import androidx.media3.common.MediaItem;
 import androidx.media3.exoplayer.ExoPlayer;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -74,12 +77,14 @@ public class FrmConcierge extends Fragment {
             binding.cvUnread.setVisibility(View.GONE);
         }
         Intercom.client().addUnreadConversationCountListener(i -> {
-            if (i > 0){
-                binding.cvUnread.setVisibility(View.VISIBLE);
-                binding.tvUnread.setText(String.valueOf(Intercom.client().getUnreadConversationCount()));
-            }else {
-                binding.cvUnread.setVisibility(View.GONE);
-            }
+            new Handler(Looper.getMainLooper()).post(() -> {
+                if (i > 0){
+                    binding.cvUnread.setVisibility(View.VISIBLE);
+                    binding.tvUnread.setText(String.valueOf(Intercom.client().getUnreadConversationCount()));
+                }else {
+                    binding.cvUnread.setVisibility(View.GONE);
+                }
+            });
         });
 //        if (Boolean.TRUE.equals(activity.sessionManager.getCurrentUser().getMembership())){
 //            binding.rlMbNotification.setVisibility(View.VISIBLE);
